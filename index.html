@@ -139,7 +139,8 @@ class FightScene extends Phaser.Scene{
   }
   s.setPosition(f.visualX,f.visualY);
   s.setFlipX(f.name.startsWith('JUNIN')?f.dir===1:f.dir===-1);
-  s.setDisplaySize((f.name.startsWith('CHILA')&&(s.texture.key.startsWith('chila_stance_')||s.texture.key.startsWith('chila_walk_'))?174:((s.texture.key.startsWith('chila_punch_')||s.texture.key.startsWith('chila_kick_'))?210:((s.texture.key.startsWith('chila_jump_')||s.texture.key.startsWith('chila_crouch_'))?210:153)))*f.visualScaleX,218*f.visualScaleY);
+  const isChilaCrouch=f.name.startsWith('CHILA')&&s.texture.key.startsWith('chila_crouch_');
+  s.setDisplaySize((isChilaCrouch?270:(f.name.startsWith('CHILA')&&(s.texture.key.startsWith('chila_stance_')||s.texture.key.startsWith('chila_walk_'))?174:((s.texture.key.startsWith('chila_punch_')||s.texture.key.startsWith('chila_kick_'))?210:(s.texture.key.startsWith('chila_jump_')?210:153))))*f.visualScaleX,(isChilaCrouch?230:218)*f.visualScaleY);
   s.setAngle(f.visualAngle);
   s.setTint(recoil?0xff7777:f.block?0x91caff:0xffffff);
  }
