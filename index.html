@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Arreda a Mão v4.5 — Churrasco do Vô Gaúcho</title><script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script><style>*{box-sizing:border-box}body{margin:0;background:#09090f;color:#eee;font-family:Arial,Helvetica,sans-serif;display:flex;align-items:center;flex-direction:column;min-height:100vh}header{text-align:center;padding:18px 10px 10px}h1{font-size:clamp(24px,4vw,42px);margin:0;color:#f5d36d;text-shadow:3px 3px #8e2428;letter-spacing:2px}header p{margin:8px;color:#aaa}#game{width:min(100%,1000px);padding:0 10px}#game canvas{display:block;width:100%;height:auto;box-shadow:0 0 40px #000;border:2px solid #8c6b34}.controls{width:min(100%,1000px);display:flex;gap:12px;padding:15px 10px;flex-wrap:wrap}.controls>div{flex:1;min-width:250px;background:#171720;border:1px solid #37313b;border-radius:8px;padding:12px;line-height:1.7;font-size:14px}.controls b{color:#f5d36d}kbd{background:#34323a;padding:3px 6px;border-radius:4px;color:white}button{border:0;background:#e1b74f;color:#1b1010;padding:10px 20px;font-weight:bold;cursor:pointer;border-radius:6px}#error{padding:20px;color:#ff7a7a;text-align:center}</style></head><body><header><h1>ARREDA A MÃO</h1><p>BAR DO SERJÃO • EDIÇÃO ARCADE 1.5 • BAR DO SERJÃO</p></header><div id="game"></div><div class="controls"><div><b>P1 • TECLADO 1 (QUALQUER PERSONAGEM)</b><br><kbd>A</kbd>/<kbd>D</kbd> mover · <kbd>W</kbd> pular · <kbd>S</kbd> agachar<br><kbd>F</kbd> soco · <kbd>G</kbd> chute · <kbd>H</kbd> defender · <kbd>Q</kbd> Bolinha / especial · <kbd>R</kbd> Churrasco do Vô Gaúcho (Chila)</div><div><b>P2 • TECLADO 2 (MULTIPLAYER LOCAL)</b><br><kbd>←</kbd>/<kbd>→</kbd> mover · <kbd>↑</kbd> pular · <kbd>↓</kbd> agachar<br><kbd>K</kbd> soco · <kbd>L</kbd> chute · <kbd>O</kbd> defender · <kbd>P</kbd> especial · <kbd>U</kbd> Churrasco do Vô Gaúcho (Chila)</div></div><div id="error"></div><script>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Arreda a Mão v4.6 — Escala do Chila corrigida</title><script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script><style>*{box-sizing:border-box}body{margin:0;background:#09090f;color:#eee;font-family:Arial,Helvetica,sans-serif;display:flex;align-items:center;flex-direction:column;min-height:100vh}header{text-align:center;padding:18px 10px 10px}h1{font-size:clamp(24px,4vw,42px);margin:0;color:#f5d36d;text-shadow:3px 3px #8e2428;letter-spacing:2px}header p{margin:8px;color:#aaa}#game{width:min(100%,1000px);padding:0 10px}#game canvas{display:block;width:100%;height:auto;box-shadow:0 0 40px #000;border:2px solid #8c6b34}.controls{width:min(100%,1000px);display:flex;gap:12px;padding:15px 10px;flex-wrap:wrap}.controls>div{flex:1;min-width:250px;background:#171720;border:1px solid #37313b;border-radius:8px;padding:12px;line-height:1.7;font-size:14px}.controls b{color:#f5d36d}kbd{background:#34323a;padding:3px 6px;border-radius:4px;color:white}button{border:0;background:#e1b74f;color:#1b1010;padding:10px 20px;font-weight:bold;cursor:pointer;border-radius:6px}#error{padding:20px;color:#ff7a7a;text-align:center}</style></head><body><header><h1>ARREDA A MÃO</h1><p>BAR DO SERJÃO • EDIÇÃO ARCADE 1.5 • BAR DO SERJÃO</p></header><div id="game"></div><div class="controls"><div><b>P1 • TECLADO 1 (QUALQUER PERSONAGEM)</b><br><kbd>A</kbd>/<kbd>D</kbd> mover · <kbd>W</kbd> pular · <kbd>S</kbd> agachar<br><kbd>F</kbd> soco · <kbd>G</kbd> chute · <kbd>H</kbd> defender · <kbd>Q</kbd> Bolinha / especial · <kbd>R</kbd> Churrasco do Vô Gaúcho (Chila)</div><div><b>P2 • TECLADO 2 (MULTIPLAYER LOCAL)</b><br><kbd>←</kbd>/<kbd>→</kbd> mover · <kbd>↑</kbd> pular · <kbd>↓</kbd> agachar<br><kbd>K</kbd> soco · <kbd>L</kbd> chute · <kbd>O</kbd> defender · <kbd>P</kbd> especial · <kbd>U</kbd> Churrasco do Vô Gaúcho (Chila)</div></div><div id="error"></div><script>
 if(!window.Phaser){document.getElementById('error').textContent='Não foi possível carregar o Phaser. Conecte-se à internet e atualize a página.';}else{
 const W=960,H=540,FLOOR=440;
 const CHARACTER_DATA={
@@ -12,7 +12,19 @@ const CPU_DIFFICULTIES={
  medio:{name:'MÉDIO',reaction:370,decisionMin:240,decisionMax:450,accuracy:22,defend:.47,special:.24,attack:.58,jump:.11,crouch:.10,retreat:.15,pause:.16},
  dificil:{name:'DIFÍCIL',reaction:205,decisionMin:160,decisionMax:330,accuracy:9,defend:.66,special:.34,attack:.74,jump:.14,crouch:.12,retreat:.21,pause:.08}
 };
-const CHILA_V44_SIZE={jump:{width:193.27,height:249.24},crouch:{width:180.75,height:233.88},defense:{width:177.5,height:233.8}}; // Uniform proportional scale per animation
+// Corpo do Chila: os sprites de stance, caminhada, salto, agachamento e
+// defesa foram desenhados com a mesma escala de cabeça/ombros no PNG original.
+// O stance mede 348x436 em pixels nativos e aparece com 174x218 (scale=0.5).
+// A mesma escala ISOTRÓPICA vale para TODOS os quadros dos outros três grupos.
+// Nunca igualar o tamanho dos retângulos: o agachamento deve ficar mais baixo.
+// O sprite já possui a mesma margem inferior transparente (~6 px nativos).
+const CHILA_VISUAL={
+  stance:{scale:.5,offsetX:0,offsetY:0},
+  walk:{scale:.5,offsetX:0,offsetY:0},
+  crouch:{scale:.5,offsetX:0,offsetY:0},
+  jump:{scale:.5,offsetX:0,offsetY:0},
+  defense:{scale:.5,offsetX:0,offsetY:0}
+};
 
 // Old punches, movement and specials retain their original balance.
 // One proportional factor per animation group, never a per-frame resize.
@@ -978,13 +990,21 @@ if(connect&&((b.x-a.x)*a.dir)>0){a.attack.hit=true;let damage=a.attack.type==='p
   const isChilaSpecial=f.characterId==='chila'&&s.texture.key.startsWith('chila_special_');
   const isChilaCrouch=f.characterId==='chila'&&s.texture.key.startsWith('chila_crouch_');
   const isChilaDefense=f.characterId==='chila'&&s.texture.key.startsWith('chila_defense_');
-  // Do not stretch new Chila poses: identical native size and proportional display dimensions.
-  const newMotion=f.characterId==='chila'&&(s.texture.key.startsWith('chila_jump_')?'jump':s.texture.key.startsWith('chila_crouch_')?'crouch':s.texture.key.startsWith('chila_defense_')?'defense':null);
+  // A animação muda de textura, nunca de escala do corpo.
+  // Mantemos o mesmo ponto de origem do lutador (setOrigin(.5,1)) e o piso
+  // definido pela física; os offsets existem só para correções VISUAIS futuras.
+  const chilaBodyMotion=f.characterId==='chila'&&(
+    s.texture.key.startsWith('chila_jump_')?'jump':
+    s.texture.key.startsWith('chila_crouch_')?'crouch':
+    s.texture.key.startsWith('chila_defense_')?'defense':
+    s.texture.key.startsWith('chila_walk_')?'walk':
+    s.texture.key.startsWith('chila_stance_')?'stance':null);
   if(f.characterId==='chila'&&f.gauchoStage){
-    s.setScale(GAUCHO_SCALE[f.gauchoStage]); // isotropic: no width/height distortion
-  }else if(newMotion){
-    const box=CHILA_V44_SIZE[newMotion];
-    s.setDisplaySize(box.width*f.visualScaleX,box.height*f.visualScaleY);
+    s.setScale(GAUCHO_SCALE[f.gauchoStage]); // Especial preservado sem alteração
+  }else if(chilaBodyMotion){
+    const visual=CHILA_VISUAL[chilaBodyMotion];
+    s.setScale(visual.scale); // um único fator para X e Y (sem deformação)
+    s.setPosition(f.visualX+visual.offsetX*f.dir,f.visualY+visual.offsetY);
   }else{
   s.setDisplaySize((f.characterId==='junin'?(s.texture.key.startsWith('jetta_entry_')?295:(s.texture.key.startsWith('junin_crouch_')?270:(s.texture.key.startsWith('junin_jump_')?210:(s.texture.key.startsWith('junin_kick_')?312:(s.texture.key.startsWith('junin_punch_')?274:174))))):(isChilaSpecial?270:(isChilaCrouch?270:(isChilaDefense?230:(f.characterId==='chila'&&(s.texture.key.startsWith('chila_stance_')||s.texture.key.startsWith('chila_walk_'))?174:((s.texture.key.startsWith('chila_punch_')||s.texture.key.startsWith('chila_kick_'))?280:(s.texture.key.startsWith('chila_jump_')?228:153)))))))*f.visualScaleX,(f.characterId==='junin'&&s.texture.key.startsWith('jetta_entry_')?252:(isChilaSpecial||isChilaCrouch||(f.characterId==='junin'&&s.texture.key.startsWith('junin_crouch_'))?230:218))*f.visualScaleY);
   }
