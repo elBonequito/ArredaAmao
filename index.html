@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Arreda a Mão v4.6 — Escala do Chila corrigida</title><script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script><style>*{box-sizing:border-box}body{margin:0;background:#09090f;color:#eee;font-family:Arial,Helvetica,sans-serif;display:flex;align-items:center;flex-direction:column;min-height:100vh}header{text-align:center;padding:18px 10px 10px}h1{font-size:clamp(24px,4vw,42px);margin:0;color:#f5d36d;text-shadow:3px 3px #8e2428;letter-spacing:2px}header p{margin:8px;color:#aaa}#game{width:min(100%,1000px);padding:0 10px}#game canvas{display:block;width:100%;height:auto;box-shadow:0 0 40px #000;border:2px solid #8c6b34}.controls{width:min(100%,1000px);display:flex;gap:12px;padding:15px 10px;flex-wrap:wrap}.controls>div{flex:1;min-width:250px;background:#171720;border:1px solid #37313b;border-radius:8px;padding:12px;line-height:1.7;font-size:14px}.controls b{color:#f5d36d}kbd{background:#34323a;padding:3px 6px;border-radius:4px;color:white}button{border:0;background:#e1b74f;color:#1b1010;padding:10px 20px;font-weight:bold;cursor:pointer;border-radius:6px}#error{padding:20px;color:#ff7a7a;text-align:center}</style></head><body><header><h1>ARREDA A MÃO</h1><p>BAR DO SERJÃO • EDIÇÃO ARCADE 1.5 • BAR DO SERJÃO</p></header><div id="game"></div><div class="controls"><div><b>P1 • TECLADO 1 (QUALQUER PERSONAGEM)</b><br><kbd>A</kbd>/<kbd>D</kbd> mover · <kbd>W</kbd> pular · <kbd>S</kbd> agachar<br><kbd>F</kbd> soco · <kbd>G</kbd> chute · <kbd>H</kbd> defender · <kbd>Q</kbd> Bolinha / especial · <kbd>R</kbd> Churrasco do Vô Gaúcho (Chila)</div><div><b>P2 • TECLADO 2 (MULTIPLAYER LOCAL)</b><br><kbd>←</kbd>/<kbd>→</kbd> mover · <kbd>↑</kbd> pular · <kbd>↓</kbd> agachar<br><kbd>K</kbd> soco · <kbd>L</kbd> chute · <kbd>O</kbd> defender · <kbd>P</kbd> especial · <kbd>U</kbd> Churrasco do Vô Gaúcho (Chila)</div></div><div id="error"></div><script>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Arreda a Mão v4.7 — Tecla Q corrigida</title><script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script><style>*{box-sizing:border-box}body{margin:0;background:#09090f;color:#eee;font-family:Arial,Helvetica,sans-serif;display:flex;align-items:center;flex-direction:column;min-height:100vh}header{text-align:center;padding:18px 10px 10px}h1{font-size:clamp(24px,4vw,42px);margin:0;color:#f5d36d;text-shadow:3px 3px #8e2428;letter-spacing:2px}header p{margin:8px;color:#aaa}#game{width:min(100%,1000px);padding:0 10px}#game canvas{display:block;width:100%;height:auto;box-shadow:0 0 40px #000;border:2px solid #8c6b34}.controls{width:min(100%,1000px);display:flex;gap:12px;padding:15px 10px;flex-wrap:wrap}.controls>div{flex:1;min-width:250px;background:#171720;border:1px solid #37313b;border-radius:8px;padding:12px;line-height:1.7;font-size:14px}.controls b{color:#f5d36d}kbd{background:#34323a;padding:3px 6px;border-radius:4px;color:white}button{border:0;background:#e1b74f;color:#1b1010;padding:10px 20px;font-weight:bold;cursor:pointer;border-radius:6px}#error{padding:20px;color:#ff7a7a;text-align:center}</style></head><body><header><h1>ARREDA A MÃO</h1><p>BAR DO SERJÃO • EDIÇÃO ARCADE 1.5 • BAR DO SERJÃO</p></header><div id="game"></div><div class="controls"><div><b>P1 • TECLADO 1 (QUALQUER PERSONAGEM)</b><br><kbd>A</kbd>/<kbd>D</kbd> mover · <kbd>W</kbd> pular · <kbd>S</kbd> agachar<br><kbd>F</kbd> soco · <kbd>G</kbd> chute · <kbd>H</kbd> defender · <kbd>Q</kbd> especial (Chila: Churrasco do Vô Gaúcho; Junin: Jetta) · <kbd>Shift</kbd>+<kbd>Q</kbd> Bolinha do Chila</div><div><b>P2 • TECLADO 2 (MULTIPLAYER LOCAL)</b><br><kbd>←</kbd>/<kbd>→</kbd> mover · <kbd>↑</kbd> pular · <kbd>↓</kbd> agachar<br><kbd>K</kbd> soco · <kbd>L</kbd> chute · <kbd>O</kbd> defender · <kbd>P</kbd> especial · <kbd>U</kbd> Churrasco do Vô Gaúcho (Chila)</div></div><div id="error"></div><script>
 if(!window.Phaser){document.getElementById('error').textContent='Não foi possível carregar o Phaser. Conecte-se à internet e atualize a página.';}else{
 const W=960,H=540,FLOOR=440;
 const CHARACTER_DATA={
@@ -62,7 +62,7 @@ class FightScene extends Phaser.Scene{
         frameRate:rate,repeat:loop?-1:0});
     }
     this.createChilaStance();this.drawStage();
-    this.keys=this.input.keyboard.addKeys('A,D,W,S,F,G,H,Q,R,K,L,O,P,U,LEFT,RIGHT,UP,DOWN,ENTER,SPACE,ESC,ESCAPE,BACKSPACE');
+    this.keys=this.input.keyboard.addKeys('A,D,W,S,F,G,H,Q,SHIFT,K,L,O,P,U,LEFT,RIGHT,UP,DOWN,ENTER,SPACE,ESC,ESCAPE,BACKSPACE');
     this.input.keyboard.addCapture(['UP','DOWN','LEFT','RIGHT','SPACE']);
     this.p=[];this.projectiles=[];this.jetta=null;this.hitEffects=new Set();
     this.gauchoShots=[];this.gauchoImpacts=[];
@@ -263,7 +263,7 @@ class FightScene extends Phaser.Scene{
    });
    this.projectiles.forEach(z=>{if(z.g&&z.g.active)z.g.destroy()});this.projectiles=[];
    this.roundText.setText('ROUND '+this.round);
-   this.announcement.setText('ROUND '+this.round);this.info.setText(this.mode==='single'?'P1: A/D mover • W/S • F/G • H • Q especial • R Churrasco (Chila)':'P1: A/D W/S F/G H/Q/R    |    P2: ←/→ ↑/↓ K/L O/P/U');
+   this.announcement.setText('ROUND '+this.round);this.info.setText(this.mode==='single'?'P1: A/D mover • W/S • F/G • H • Q especial • Shift+Q Bolinha (Chila)':'P1: A/D W/S F/G H/Q/Shift+Q    |    P2: ←/→ ↑/↓ K/L O/P/U');
    this.actionLockUntil=this.time.now+1900;
    this.roundTimer(1200,()=>{if(this.state==='intro'){
       this.announcement.setText('LUTEM!');this.info.setText('');
@@ -297,14 +297,19 @@ class FightScene extends Phaser.Scene{
      return c;
    }
    const k=this.keys,one=f.controller==='p1';
+   // Q is read exactly once: Chila uses Q for Churrasco and Shift+Q for Bolinha.
+   // Junin keeps Jetta on Q. P2 remains P/U; CPU commands are unchanged.
+   const primarySpecialPressed=Phaser.Input.Keyboard.JustDown(one?k.Q:k.P);
+   const secondSpecialPressed=!one&&f.characterId==='chila'&&Phaser.Input.Keyboard.JustDown(k.U);
+   const shiftBolinha=one&&f.characterId==='chila'&&k.SHIFT.isDown;
    return {
      left:(one?k.A:k.LEFT).isDown,right:(one?k.D:k.RIGHT).isDown,
      jump:Phaser.Input.Keyboard.JustDown(one?k.W:k.UP),
      crouch:(one?k.S:k.DOWN).isDown,guard:(one?k.H:k.O).isDown,
      punch:Phaser.Input.Keyboard.JustDown(one?k.F:k.K),
      kick:Phaser.Input.Keyboard.JustDown(one?k.G:k.L),
-     special:Phaser.Input.Keyboard.JustDown(one?k.Q:k.P),
-     special2:f.characterId==='chila'&&Phaser.Input.Keyboard.JustDown(one?k.R:k.U)
+     special:primarySpecialPressed&&(!one||f.characterId!=='chila'||shiftBolinha),
+     special2:one?(f.characterId==='chila'&&primarySpecialPressed&&!shiftBolinha):secondSpecialPressed
    };
  }
  // Infrequent decisions, configurable reaction delay and no foreknowledge of inputs.
