@@ -1,0 +1,102 @@
+# ARREDA A MÃO — Projeto organizado (base v5.0)
+
+Reorganização **sem recompressão de sprites e sem mudanças intencionais na jogabilidade**. O código foi distribuído por responsabilidade, mantendo **uma única cena Phaser (`FightScene`)** e seus métodos de combate. As funções foram movidas mantendo o mesmo corpo original; a ligação por `Object.assign` é uma etapa intermediária deliberada para evitar reescrever toda a cena.
+
+## Estrutura
+
+```text
+index.html                   — página, título, controles e mensagens
+css/style.css                — estilo original
+js/main.js                  — inicialização Phaser 3.90.0
+js/assets/manifest.js       — 281 chaves e URLs de texturas
+js/config/                  — parâmetros da arena, personagens e CPU
+js/characters/              — parâmetros visuais e função da defesa do Junin
+js/controllers/             — camada de comandos, entradas humanas e lógica CPU
+js/combat/                  — movimento, ataques, rounds e especiais
+js/scenes/FightScene.js     — ciclo de vida da cena e criação dos lutadores
+js/scenes/visual.js         — desenho da arena e renderização das poses
+js/ui/                     — menus, seleção e HUD
+assets/characters/chila/    — imagens do Chila e do Churrasco
+assets/characters/junin/    — imagens do Junin e do Jetta
+assets/stages/              — cenário do Bar do Serjão
+README.md                   — este documento
+```
+
+**Nota:** o protótipo anexado não continha arquivos de áudio Base64 para extrair. `assets/audio/` pode ser criada futuramente quando houver efeitos de áudio.
+
+## Rodar localmente
+
+Abra um terminal na pasta onde está o `index.html` e execute:
+
+```bash
+python -m http.server 8000
+```
+
+No navegador, acesse **http://localhost:8000/**. No Windows, `py -m http.server 8000` também funciona. **Não use duplo clique no `index.html`** (`file://`), pois os módulos JavaScript nativos precisam de servidor HTTP.
+
+A versão **Phaser 3.90.0** continua vindo de `https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js`, **igual ao arquivo original**. A primeira execução requer conexão para obter o Phaser; os PNGs são locais. Não se adicionou npm, bundler ou outra engine.
+
+## Controles
+
+| Comando | P1 | P2 (multiplayer local) |
+|---|---|---|
+| Andar | A / D | ← / → |
+| Pular | W | ↑ |
+| Agachar | S | ↓ |
+| Soco | F | K |
+| Chute | G | L |
+| Defender | H | O |
+| Especial | **Q** | **P** |
+
+Cada personagem tem **um especial**: Chila Careca → **Churrasco do Avô do Chila**, Junin Hipotético → **Jetta Hipotético**. CPU usa o comando interno do personagem, não tecla P.
+
+## Publicar no GitHub Pages
+
+1. Descompacte o ZIP. Faça upload do conteúdo **da pasta do projeto**, inclusive `assets/`, `js/`, `css/`, `index.html` e `README.md`, para a raiz de seu repositório.
+2. No GitHub, acesse **Settings → Pages → Build and deployment** e selecione publicação via branch (`main`, pasta `/root`, se esse for o fluxo do projeto).
+3. Abra `https://SEU_USUARIO.github.io/SEU_REPOSITORIO/`. Todos os caminhos começam da pasta da página e funcionam em subpastas. Lembre-se de publicar todos os PNGs junto com os módulos JS.
+
+### Enviar com Git, se desejar
+
+```bash
+git add index.html css js assets README.md
+git commit -m "Organizar HTML e extrair sprites do Arreda a Mão"
+git push origin main
+```
+
+O Git faz upload dos arquivos separadamente, sem depender de um HTML gigante.
+
+## Adicionar conteúdo posteriormente
+
+- Novo personagem: dados em `js/config/characters.js`, frames em `assets/characters/NOME/`, chaves/URLs no `js/assets/manifest.js`; comportamentos e animações em `FightScene.js` e módulos de combate/renderização quando necessário.
+- Novos sprites de caminhada, chute, defesa: arquivos PNG em `assets/characters/...` e entradas no manifesto; mantenha escala e origens conforme lógica existente.
+- Novos efeitos sonoros: futuramente criar `assets/audio/`, incluir chaves em `loadAssets` (usando `scene.load.audio`) e consumir na cena.
+- CPU: dificuldades em `js/config/difficulties.js`; controle em `js/controllers/input.js`.
+- Especial do Chila e Jetta: `js/combat/specials.js`.
+
+## Integridade e tamanhos
+
+- HTML de origem: **26,708,209 bytes** (25.47 MiB).
+- Imagens declaradas no HTML: **281** (todas `image/png`).
+- Arquivos PNG exclusivos: **281**.
+- Duplicatas idênticas eliminadas: **0** (nenhuma detectada; não tentamos identificar imagens visualmente semelhantes).
+- Soma dos PNGs extraídos: **19,970,230 bytes** (19.05 MiB).
+- Novo `index.html`: **1,239 bytes**.
+
+**Tamanho em disco não equivale à transferência real nem ao consumo de memória:** o original usava Base64 (com aumento de tamanho textual), e os PNGs extraídos agora podem ser armazenados em cache pelo navegador. Ao decodificar os sprites, o Phaser ainda ocupa memória conforme a resolução de cada textura. A transferência da engine Phaser via CDN é externa a essas medidas; compressão HTTP e cache variam de acordo com hospedagem e navegador.
+
+## Limites de validação
+
+O código foi extraído e seus módulos passaram por verificações de sintaxe, integridade de bytes, carregamento de manifesto e URLs locais. O navegador automatizado, quando disponível, deve ser usado para verificação visual. **A CDN Phaser pode não estar acessível em ambientes sem acesso à internet.** Confirme manualmente os menus, P1/P2, CPU nas 3 dificuldades, personagens iguais, transições, golpes, defesas, hit reaction, especiais Q/P e rounds antes de atualizar a versão pública.
+
+### Verificações executadas nesta entrega
+
+- **281/281** PNGs decodificados, validados e comparados por SHA-256 com os bytes dos Base64 originais.
+- **299/299** URLs locais solicitadas por HTTP responderam **200 OK** (281 imagens + HTML, CSS e módulos JS).
+- Arquivos JavaScript aprovados em `node --check`; módulos importados e `FightScene` instanciada com ambiente Phaser simulado.
+- O método `preload()` registrou as **281 chaves originais**; nenhuma chave foi renomeada.
+- Smoke test com ambiente simulado: menu inicial, seleção Single Player, inicialização das quatro combinações de personagens em Multiplayer Local e inicialização das três dificuldades de CPU.
+- Smoke test de comandos: tecla **Q** para P1, **P** para P2, pulso único de comando e CPU isolada de P; especial do Chila/Junin selecionado por `characterId`.
+- ZIP íntegro (`ZipFile.testzip()`).
+
+**Não testado no navegador com Phaser real:** animações, efeitos sonoros, colisões, acertos e transições visuais durante uma partida completa. A dependência CDN do Phaser não estava disponível para o navegador nesta execução. Execute uma partida manual completa antes de substituir o site público.

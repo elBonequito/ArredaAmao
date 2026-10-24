@@ -1,0 +1,1761 @@
+{
+  "source_html": "/mnt/data/index(20261024-163306).html",
+  "source_bytes": 26708209,
+  "new_index_bytes": 1239,
+  "total_extracted_project_bytes": 20064610,
+  "base64_image_references": 281,
+  "unique_image_files": 281,
+  "byte_identical_duplicates_eliminated": 0,
+  "asset_bytes": 19970230,
+  "assets": [
+    {
+      "key": "chila_hit_0",
+      "path": "assets/characters/chila/chila_hit_0.png",
+      "bytes": 98574,
+      "sha256": "c16513935db50dc7b45487c1ee6be33d3fb54ed2744d916e0316738305951b06"
+    },
+    {
+      "key": "chila_hit_1",
+      "path": "assets/characters/chila/chila_hit_1.png",
+      "bytes": 99586,
+      "sha256": "55676077ff90183940f175bbdb8f30989348abc79e2da51812dca879b585850f"
+    },
+    {
+      "key": "chila_hit_2",
+      "path": "assets/characters/chila/chila_hit_2.png",
+      "bytes": 101183,
+      "sha256": "1e0efe3c899c79a44cc44fda9d53b1bd6176a9bd081f21ba961bc0371e6eed7d"
+    },
+    {
+      "key": "chila_hit_3",
+      "path": "assets/characters/chila/chila_hit_3.png",
+      "bytes": 96014,
+      "sha256": "1ea099b1d580002e0d228d167fa335d2918094fa99b22ec835471cedf19e24a6"
+    },
+    {
+      "key": "chila_hit_4",
+      "path": "assets/characters/chila/chila_hit_4.png",
+      "bytes": 93167,
+      "sha256": "7d8f4ea144a0f576be6871fb327923eee2cc8716458b419378405d3f6bef4dec"
+    },
+    {
+      "key": "chila_hit_5",
+      "path": "assets/characters/chila/chila_hit_5.png",
+      "bytes": 94983,
+      "sha256": "3f2617e972a0eb815115ccadfa5af1537567a5c7e9c328a5995b6570e59981b9"
+    },
+    {
+      "key": "chila_hit_6",
+      "path": "assets/characters/chila/chila_hit_6.png",
+      "bytes": 95727,
+      "sha256": "74c447eeddb61fc58ea7bff5ce15f345646d269c42ae8cc1a16ae4be9a80ebfd"
+    },
+    {
+      "key": "chila_hit_7",
+      "path": "assets/characters/chila/chila_hit_7.png",
+      "bytes": 97502,
+      "sha256": "e7af8b93a248a1cc198ceaff9b8e92f51d76d1362e44afec93114915744c5201"
+    },
+    {
+      "key": "chila_hit_8",
+      "path": "assets/characters/chila/chila_hit_8.png",
+      "bytes": 98678,
+      "sha256": "53c7442e62f549a22e9c201bfb5046265728178ca3cee9e022f539465c9c53b8"
+    },
+    {
+      "key": "chila_hit_9",
+      "path": "assets/characters/chila/chila_hit_9.png",
+      "bytes": 97803,
+      "sha256": "3456e77950429d92390dc740276b8801ef73d09f6f151bd82c2bee5af63c1b79"
+    },
+    {
+      "key": "chila_hit_10",
+      "path": "assets/characters/chila/chila_hit_10.png",
+      "bytes": 96950,
+      "sha256": "1e63a05a26682182663f9f828fe955f0b75467419c54146e2be2916555b62425"
+    },
+    {
+      "key": "chila_hit_11",
+      "path": "assets/characters/chila/chila_hit_11.png",
+      "bytes": 97056,
+      "sha256": "09a93b2fdb939408fb69af5157b0c6dd4b79104ce3c0fea922ab59e9a9a93eba"
+    },
+    {
+      "key": "gaucho_preparacao_0",
+      "path": "assets/characters/chila/special/gaucho_preparacao_0.png",
+      "bytes": 47213,
+      "sha256": "b7146a384bdbb0ab4f51540a18db8662186c8fd02e17f7d5430aa2a8978b2d81"
+    },
+    {
+      "key": "gaucho_preparacao_1",
+      "path": "assets/characters/chila/special/gaucho_preparacao_1.png",
+      "bytes": 47833,
+      "sha256": "4113f79073cbc53ff297a27674004673972882434c3ea0a3c1def0abdd859256"
+    },
+    {
+      "key": "gaucho_preparacao_2",
+      "path": "assets/characters/chila/special/gaucho_preparacao_2.png",
+      "bytes": 64726,
+      "sha256": "5969425079415bc881c44b9d0d03d638329a0ab0533fda6b7a4ff1d4256ea5a3"
+    },
+    {
+      "key": "gaucho_preparacao_3",
+      "path": "assets/characters/chila/special/gaucho_preparacao_3.png",
+      "bytes": 57212,
+      "sha256": "85b98f79703bba7ca67d0d68130f2082b90f1536bb9fe016a6da0000f8c99abd"
+    },
+    {
+      "key": "gaucho_preparacao_4",
+      "path": "assets/characters/chila/special/gaucho_preparacao_4.png",
+      "bytes": 60540,
+      "sha256": "34a512c1c31c59d823d493e7638d149688718e2f05b8b95d1d026d5524b2f7dc"
+    },
+    {
+      "key": "gaucho_preparacao_5",
+      "path": "assets/characters/chila/special/gaucho_preparacao_5.png",
+      "bytes": 58420,
+      "sha256": "af4f197814027f2c9ad67ec0ddad8d94e2f7d2c63bfc546ee6fb8da00fe17c98"
+    },
+    {
+      "key": "gaucho_preparacao_6",
+      "path": "assets/characters/chila/special/gaucho_preparacao_6.png",
+      "bytes": 57798,
+      "sha256": "dcc9639a2b567513576e6c1afdb8463749c69ce989d266e1db887f34445f32c7"
+    },
+    {
+      "key": "gaucho_preparacao_7",
+      "path": "assets/characters/chila/special/gaucho_preparacao_7.png",
+      "bytes": 55477,
+      "sha256": "7c8c12343565de1269c4a68ce12d87698f79484a7e8f55ba1f4eca1cf08ea1da"
+    },
+    {
+      "key": "gaucho_preparacao_8",
+      "path": "assets/characters/chila/special/gaucho_preparacao_8.png",
+      "bytes": 53477,
+      "sha256": "e94613555c13af43bbe244184bc0a0364279c4999cf4f37ed3824888a5634a24"
+    },
+    {
+      "key": "gaucho_concentracao_0",
+      "path": "assets/characters/chila/special/gaucho_concentracao_0.png",
+      "bytes": 46278,
+      "sha256": "094cc0cea2fc5ef95c17a388bf4ec3f76d7d92c76937ef0cbd90ac7b4c46ee2f"
+    },
+    {
+      "key": "gaucho_concentracao_1",
+      "path": "assets/characters/chila/special/gaucho_concentracao_1.png",
+      "bytes": 43613,
+      "sha256": "c653e1daf4fdf73a280a9e23482c761303c2f3e70b5e5bf2ae2489cf9543ba4a"
+    },
+    {
+      "key": "gaucho_concentracao_2",
+      "path": "assets/characters/chila/special/gaucho_concentracao_2.png",
+      "bytes": 44024,
+      "sha256": "f35fa199cdefc16dda796f11a0e1ac81b7754a0aca49c39da34697b753be9baa"
+    },
+    {
+      "key": "gaucho_concentracao_3",
+      "path": "assets/characters/chila/special/gaucho_concentracao_3.png",
+      "bytes": 45712,
+      "sha256": "0f26fb9d5a786ed16c6d520b7cbf3e7c18682022a7c6126c3279966e54da36f0"
+    },
+    {
+      "key": "gaucho_concentracao_4",
+      "path": "assets/characters/chila/special/gaucho_concentracao_4.png",
+      "bytes": 46116,
+      "sha256": "0b3f1bf66c84d074174d178e8c34801045a250a272637b937c8fa77c33d20be5"
+    },
+    {
+      "key": "gaucho_concentracao_5",
+      "path": "assets/characters/chila/special/gaucho_concentracao_5.png",
+      "bytes": 49212,
+      "sha256": "a27c075f68bf2e52b7147d22cdb3caa117fb41873129b5930c3af70f7deb6aa6"
+    },
+    {
+      "key": "gaucho_lancamento_0",
+      "path": "assets/characters/chila/special/gaucho_lancamento_0.png",
+      "bytes": 40442,
+      "sha256": "e8e1abdb56403356ae981c10d3d1c87187c2f158f27abb8f31ca3384e17f9220"
+    },
+    {
+      "key": "gaucho_lancamento_1",
+      "path": "assets/characters/chila/special/gaucho_lancamento_1.png",
+      "bytes": 40214,
+      "sha256": "ab641ac4b71008316ef8dc37dc29d91f91f3861562ec9a1937ede9250104048e"
+    },
+    {
+      "key": "gaucho_lancamento_2",
+      "path": "assets/characters/chila/special/gaucho_lancamento_2.png",
+      "bytes": 39702,
+      "sha256": "2f452f437c78e5a934b150f4363cd7ff1fa8fc224fe6ae903340f19dabc8bded"
+    },
+    {
+      "key": "gaucho_lancamento_3",
+      "path": "assets/characters/chila/special/gaucho_lancamento_3.png",
+      "bytes": 39319,
+      "sha256": "92b0f4f0f75635fa670576659ebcdd3cfde2eceaaae83710c8efe0855c2ba38a"
+    },
+    {
+      "key": "gaucho_lancamento_4",
+      "path": "assets/characters/chila/special/gaucho_lancamento_4.png",
+      "bytes": 41350,
+      "sha256": "3bfe8531d6007d1174b8e309cd614f36653902727ddc7eef6b937f877a5867a8"
+    },
+    {
+      "key": "gaucho_lancamento_5",
+      "path": "assets/characters/chila/special/gaucho_lancamento_5.png",
+      "bytes": 46186,
+      "sha256": "5b11a23e513c2a4532dde9a6c0b360d5f7a7fe28e7b677efa3a0278f98e118ff"
+    },
+    {
+      "key": "gaucho_recuperacao_0",
+      "path": "assets/characters/chila/special/gaucho_recuperacao_0.png",
+      "bytes": 42127,
+      "sha256": "0d624108391a274269ea398467549e7bc90db515001e001656ebd34424947cae"
+    },
+    {
+      "key": "gaucho_recuperacao_1",
+      "path": "assets/characters/chila/special/gaucho_recuperacao_1.png",
+      "bytes": 52021,
+      "sha256": "ec9b65b635212599d6ff42cbbf3fde4748b62606b5b9011559600747dae851e5"
+    },
+    {
+      "key": "gaucho_recuperacao_2",
+      "path": "assets/characters/chila/special/gaucho_recuperacao_2.png",
+      "bytes": 36888,
+      "sha256": "46bfb3bc364aa794127460dc9430b5880b2a1c4948b8524a036511ca77b1b77b"
+    },
+    {
+      "key": "gaucho_recuperacao_3",
+      "path": "assets/characters/chila/special/gaucho_recuperacao_3.png",
+      "bytes": 37246,
+      "sha256": "b95ec28ae9cfc073500b5a834cf6ce9ca083c18cde4bbba70011e1d0e767a6ac"
+    },
+    {
+      "key": "gaucho_bola_fogo_0",
+      "path": "assets/characters/chila/special/gaucho_bola_fogo_0.png",
+      "bytes": 3803,
+      "sha256": "5783bc45993f03fa6209309ccbd810cf16f74bfec203707cc41505bb6d881ac4"
+    },
+    {
+      "key": "gaucho_bola_fogo_1",
+      "path": "assets/characters/chila/special/gaucho_bola_fogo_1.png",
+      "bytes": 7874,
+      "sha256": "c3ed16d76974a2916b9b1f0890247b084754dd8f4e0eebcc49dbbd76dba64ea4"
+    },
+    {
+      "key": "gaucho_bola_fogo_2",
+      "path": "assets/characters/chila/special/gaucho_bola_fogo_2.png",
+      "bytes": 11968,
+      "sha256": "840b78d1ab9ab291e6e1e135fd49865c9dbd782ffbcf06ef0310fedfb95170e1"
+    },
+    {
+      "key": "gaucho_bola_fogo_3",
+      "path": "assets/characters/chila/special/gaucho_bola_fogo_3.png",
+      "bytes": 15016,
+      "sha256": "13aa44eec6f4a3fa4348dba2ab066495ea82b99abff9d859ed92c1436cba8564"
+    },
+    {
+      "key": "gaucho_bola_fogo_4",
+      "path": "assets/characters/chila/special/gaucho_bola_fogo_4.png",
+      "bytes": 17321,
+      "sha256": "27a2bad17c27f5e01c3381fc698390bb81ca4032774bc23cf16510736fbf6405"
+    },
+    {
+      "key": "gaucho_bola_fogo_5",
+      "path": "assets/characters/chila/special/gaucho_bola_fogo_5.png",
+      "bytes": 16678,
+      "sha256": "380908b69ce13b5770a7f405fb86187b37e8edfda509cd120f16b73b2d1bfbee"
+    },
+    {
+      "key": "gaucho_bola_fogo_6",
+      "path": "assets/characters/chila/special/gaucho_bola_fogo_6.png",
+      "bytes": 16856,
+      "sha256": "77b767db609c514132f940cbf65179b52bea51f12474da6be3ee222388d0cd76"
+    },
+    {
+      "key": "gaucho_bola_fogo_7",
+      "path": "assets/characters/chila/special/gaucho_bola_fogo_7.png",
+      "bytes": 29018,
+      "sha256": "f746ea6387f58880ed7dc18354f9044aa84f4309f66b49138a168181f59ac8cd"
+    },
+    {
+      "key": "gaucho_impacto_0",
+      "path": "assets/characters/chila/special/gaucho_impacto_0.png",
+      "bytes": 7141,
+      "sha256": "8b3c19c1d6eb657f70a6b4d9c5d33b830221cf8d8a85bfa815b1a241eb0f0032"
+    },
+    {
+      "key": "gaucho_impacto_1",
+      "path": "assets/characters/chila/special/gaucho_impacto_1.png",
+      "bytes": 17910,
+      "sha256": "a0530eee0a7f6eda2e475b1c4a9c6ebe05366063aa76385ff810271cc3a47970"
+    },
+    {
+      "key": "gaucho_impacto_2",
+      "path": "assets/characters/chila/special/gaucho_impacto_2.png",
+      "bytes": 21388,
+      "sha256": "24ac1119abef3f08462c618553f10d5642ec3434dbd0c87329762dd7e9710665"
+    },
+    {
+      "key": "gaucho_impacto_3",
+      "path": "assets/characters/chila/special/gaucho_impacto_3.png",
+      "bytes": 19933,
+      "sha256": "8fc2028858297b1b409b1adb9acc742b535b35b9723668d6316335156c39c99d"
+    },
+    {
+      "key": "gaucho_impacto_4",
+      "path": "assets/characters/chila/special/gaucho_impacto_4.png",
+      "bytes": 15266,
+      "sha256": "f5a495ef3718834704dd558d7681b6351f57189aa89d8afc45f73443794063f4"
+    },
+    {
+      "key": "gaucho_impacto_5",
+      "path": "assets/characters/chila/special/gaucho_impacto_5.png",
+      "bytes": 8360,
+      "sha256": "c4fa460b29efaafff320ae7934385ed7c4ffb587a68f098bf9402f8b91efdf3d"
+    },
+    {
+      "key": "gaucho_impacto_6",
+      "path": "assets/characters/chila/special/gaucho_impacto_6.png",
+      "bytes": 5638,
+      "sha256": "c8897984dee34b63fad7c1328fa11273d0825998b324f866c0084fd311218a42"
+    },
+    {
+      "key": "gaucho_impacto_7",
+      "path": "assets/characters/chila/special/gaucho_impacto_7.png",
+      "bytes": 3301,
+      "sha256": "15de13a305c3ec269315d52b040012dd6dfc5d18e168758ba30bcec238baf526"
+    },
+    {
+      "key": "jetta_entry_0",
+      "path": "assets/characters/junin/special/jetta_entry_0.png",
+      "bytes": 23686,
+      "sha256": "a5b2ad4d4bf0c576d4155b3c6d57af9ec5cb08bd273e3bdc10dac042e3cd9192"
+    },
+    {
+      "key": "jetta_entry_1",
+      "path": "assets/characters/junin/special/jetta_entry_1.png",
+      "bytes": 23558,
+      "sha256": "23d11af7362ee87d8c9194e9e7a3aa97a88585e48773681dd66286e445869e07"
+    },
+    {
+      "key": "jetta_entry_2",
+      "path": "assets/characters/junin/special/jetta_entry_2.png",
+      "bytes": 24898,
+      "sha256": "bec204c69dbddb1646348b94853e75f6a73315720da2696b3326a0032f919f35"
+    },
+    {
+      "key": "jetta_entry_3",
+      "path": "assets/characters/junin/special/jetta_entry_3.png",
+      "bytes": 25118,
+      "sha256": "6d2dd6c3b7ed24ca3058faa757f692b3d67f1bdbf81d5b881a7a5596c3c61ba9"
+    },
+    {
+      "key": "jetta_entry_4",
+      "path": "assets/characters/junin/special/jetta_entry_4.png",
+      "bytes": 23391,
+      "sha256": "c7a4a5d680a529a5d956d9db9492348fbff47874b9f2d4044647911fe299a901"
+    },
+    {
+      "key": "jetta_entry_5",
+      "path": "assets/characters/junin/special/jetta_entry_5.png",
+      "bytes": 34579,
+      "sha256": "d2e61938df539f342e4e5069735dc6ab42d02f88908c31bb848e93fc4be86831"
+    },
+    {
+      "key": "jetta_entry_6",
+      "path": "assets/characters/junin/special/jetta_entry_6.png",
+      "bytes": 47114,
+      "sha256": "32b94f488c62d872a7b38869c8271c6d01cc381c4b06fd0ea2b32a68836e940b"
+    },
+    {
+      "key": "jetta_entry_7",
+      "path": "assets/characters/junin/special/jetta_entry_7.png",
+      "bytes": 43089,
+      "sha256": "a990e6fd9035116ef4cbb2f48427397eb4b8cc40b9de102bbd8291e90f7b9e8d"
+    },
+    {
+      "key": "jetta_entry_8",
+      "path": "assets/characters/junin/special/jetta_entry_8.png",
+      "bytes": 25571,
+      "sha256": "dda01672c3638ba658be3f8736d9b588a4cece0bfbd190547ef042b493d5d1ef"
+    },
+    {
+      "key": "jetta_entry_9",
+      "path": "assets/characters/junin/special/jetta_entry_9.png",
+      "bytes": 23491,
+      "sha256": "007c227d50a158118d492b66da32d36023c1a84c4ba6ef8a41cb3896db10cbd8"
+    },
+    {
+      "key": "jetta_entry_10",
+      "path": "assets/characters/junin/special/jetta_entry_10.png",
+      "bytes": 21746,
+      "sha256": "641bba037f47913d2ec31ccbe59114faf464a2f4fb32df405543d065c36039de"
+    },
+    {
+      "key": "jetta_entry_11",
+      "path": "assets/characters/junin/special/jetta_entry_11.png",
+      "bytes": 20117,
+      "sha256": "40bd81363cfc4870e9ed03c683c7c9643c260c4daf19cec905c63e500cdc7604"
+    },
+    {
+      "key": "jetta_entry_12",
+      "path": "assets/characters/junin/special/jetta_entry_12.png",
+      "bytes": 20977,
+      "sha256": "8528635b9331270092c804e8b7b1090a3c8545274e1d5d1af8617e7764510b92"
+    },
+    {
+      "key": "jetta_car_0",
+      "path": "assets/characters/junin/special/jetta_car_0.png",
+      "bytes": 29694,
+      "sha256": "eb866a911fc79be83d48e7b0b4cda0291b40511a718ed26a69b39cf52fb07be3"
+    },
+    {
+      "key": "jetta_car_1",
+      "path": "assets/characters/junin/special/jetta_car_1.png",
+      "bytes": 29620,
+      "sha256": "2b6f34dc805fdf81ba8eb305eb488630e6bb68f32f5da91c5f6ed98161a0c981"
+    },
+    {
+      "key": "jetta_car_2",
+      "path": "assets/characters/junin/special/jetta_car_2.png",
+      "bytes": 30083,
+      "sha256": "af0175fd321c8ee1e75a24e0b43c1a366f8ebaec0c3b0b758d3e17646fd52089"
+    },
+    {
+      "key": "jetta_car_3",
+      "path": "assets/characters/junin/special/jetta_car_3.png",
+      "bytes": 30923,
+      "sha256": "6bf108d6ffe681f4b242221e33b2647dc93d923868994cec381088738cf9601d"
+    },
+    {
+      "key": "jetta_car_4",
+      "path": "assets/characters/junin/special/jetta_car_4.png",
+      "bytes": 27677,
+      "sha256": "d1b758e4509ba073ead18ad2ceab53e2f6e652b8f5749a445d0a5d2ce86b00ce"
+    },
+    {
+      "key": "jetta_car_5",
+      "path": "assets/characters/junin/special/jetta_car_5.png",
+      "bytes": 25413,
+      "sha256": "875d2a210984763699ab212498b8a52676049faeb909e4944940ece0097d21ce"
+    },
+    {
+      "key": "jetta_car_6",
+      "path": "assets/characters/junin/special/jetta_car_6.png",
+      "bytes": 28764,
+      "sha256": "8b7f039c474853769a54b81aa5ba1d1b80fc1b01380de27ff9ece2d3d3b3043e"
+    },
+    {
+      "key": "jetta_car_7",
+      "path": "assets/characters/junin/special/jetta_car_7.png",
+      "bytes": 27510,
+      "sha256": "b2764c260b6489c04526e1282b4c95ca93ba2ef234d8ac5bfaebf1504a6459f9"
+    },
+    {
+      "key": "jetta_driver_0",
+      "path": "assets/characters/junin/special/jetta_driver_0.png",
+      "bytes": 35025,
+      "sha256": "8662ce0a409564ee9a249c937b89e0b07f21d81363c57b7295e4934b641863ed"
+    },
+    {
+      "key": "jetta_driver_1",
+      "path": "assets/characters/junin/special/jetta_driver_1.png",
+      "bytes": 34359,
+      "sha256": "f6655204410935df0087a57a2191a3b186bf745306c64c55210bc8cb7f7e8f71"
+    },
+    {
+      "key": "jetta_driver_2",
+      "path": "assets/characters/junin/special/jetta_driver_2.png",
+      "bytes": 34920,
+      "sha256": "9451ad8ff47bdbc5670608f529d50798de94b082f18870e50e070e6dbed8c602"
+    },
+    {
+      "key": "jetta_driver_3",
+      "path": "assets/characters/junin/special/jetta_driver_3.png",
+      "bytes": 35482,
+      "sha256": "801586bbf6997f4e4898e3940cdc52a0078a641cb79f90af92f6a800cbf6752d"
+    },
+    {
+      "key": "jetta_driver_4",
+      "path": "assets/characters/junin/special/jetta_driver_4.png",
+      "bytes": 35476,
+      "sha256": "508e201e025df2d92fd7b4b306dd870ab08fb546d1063b4c9ab7d2adffb05261"
+    },
+    {
+      "key": "jetta_driver_5",
+      "path": "assets/characters/junin/special/jetta_driver_5.png",
+      "bytes": 34986,
+      "sha256": "cf43efd777cde17ba97f25df10619f4c9fab2232cb09dc5f22477a6dfc26cfab"
+    },
+    {
+      "key": "jetta_driver_6",
+      "path": "assets/characters/junin/special/jetta_driver_6.png",
+      "bytes": 34964,
+      "sha256": "3ca7e5faf0788168307a1667fa3056c3589474b4a817edcdbf0f988eaf1c3961"
+    },
+    {
+      "key": "jetta_driver_7",
+      "path": "assets/characters/junin/special/jetta_driver_7.png",
+      "bytes": 34634,
+      "sha256": "173e8d62effabd7d155688777ba969321e4a1f7b877450fa20bf72aae61687d8"
+    },
+    {
+      "key": "jetta_wheel_0",
+      "path": "assets/characters/junin/special/jetta_wheel_0.png",
+      "bytes": 19641,
+      "sha256": "2014836388c41de49272c8142264cf16a3fd52be5a175285519cfbf47aafcda1"
+    },
+    {
+      "key": "jetta_wheel_1",
+      "path": "assets/characters/junin/special/jetta_wheel_1.png",
+      "bytes": 19393,
+      "sha256": "c3bcb7d5db18ffd2fd513dfe8e9a97403d11211e324c7cddde170dd6b81ebd9f"
+    },
+    {
+      "key": "jetta_wheel_2",
+      "path": "assets/characters/junin/special/jetta_wheel_2.png",
+      "bytes": 18741,
+      "sha256": "2c91087ab7082a6c63d64224591a10a464bb31a4eaa7276b0b379a6a49ba8f93"
+    },
+    {
+      "key": "jetta_wheel_3",
+      "path": "assets/characters/junin/special/jetta_wheel_3.png",
+      "bytes": 18475,
+      "sha256": "085840e2d7e0445f6da374a274b6e76246e661653b18e59e8d844b3a2efeced6"
+    },
+    {
+      "key": "jetta_wheel_4",
+      "path": "assets/characters/junin/special/jetta_wheel_4.png",
+      "bytes": 18460,
+      "sha256": "54526a352e9824e171a631f525466432d8c2d064c62d1b9aba8c93b02c2fc652"
+    },
+    {
+      "key": "jetta_wheel_5",
+      "path": "assets/characters/junin/special/jetta_wheel_5.png",
+      "bytes": 18393,
+      "sha256": "d63988965c4054cd9533a03e9326c7683d4213ff3b2925d3c8052383437b35b4"
+    },
+    {
+      "key": "jetta_wheel_6",
+      "path": "assets/characters/junin/special/jetta_wheel_6.png",
+      "bytes": 18506,
+      "sha256": "bdfa0f8e36b5a9fb561bb66d0c4a3678af755680b1817da42672ba97358a5c8b"
+    },
+    {
+      "key": "jetta_wheel_7",
+      "path": "assets/characters/junin/special/jetta_wheel_7.png",
+      "bytes": 18657,
+      "sha256": "09188729b9a6f45ca5a21ef95f27f2c663d89a8d997f969058c5bab23e74aa32"
+    },
+    {
+      "key": "jetta_wheel_8",
+      "path": "assets/characters/junin/special/jetta_wheel_8.png",
+      "bytes": 18858,
+      "sha256": "a62a703a855f730e8f58376e873590245d99944d090a39888ed66636f473eb0a"
+    },
+    {
+      "key": "jetta_smoke_0",
+      "path": "assets/characters/junin/special/jetta_smoke_0.png",
+      "bytes": 7625,
+      "sha256": "4282f61e50673d5ff0196db0510ded2aa635ba9c38514ce400e97e9148618c3f"
+    },
+    {
+      "key": "jetta_smoke_1",
+      "path": "assets/characters/junin/special/jetta_smoke_1.png",
+      "bytes": 18690,
+      "sha256": "47ea0516342583fd17c3524cbbff348acf8d50780bd8e98af041ec6e05ba72b8"
+    },
+    {
+      "key": "jetta_smoke_2",
+      "path": "assets/characters/junin/special/jetta_smoke_2.png",
+      "bytes": 30486,
+      "sha256": "a13d9a103f0542599210db5be52bc4e37e13961ad2ab24450e3c0f84bbaabfa6"
+    },
+    {
+      "key": "jetta_smoke_3",
+      "path": "assets/characters/junin/special/jetta_smoke_3.png",
+      "bytes": 8895,
+      "sha256": "6d16c0e23bc5dd9505deb6c50cd528d90fb1ebdd282a471e4b275a82e54c5722"
+    },
+    {
+      "key": "jetta_smoke_4",
+      "path": "assets/characters/junin/special/jetta_smoke_4.png",
+      "bytes": 22362,
+      "sha256": "5f1b4337770498c0c3a14a0b64b81c39f8e3b874ee82c622b3cca642ef1366e1"
+    },
+    {
+      "key": "jetta_smoke_5",
+      "path": "assets/characters/junin/special/jetta_smoke_5.png",
+      "bytes": 20854,
+      "sha256": "c8e45bee00bb1e6d5c60811ce0eb58b3a8df6b2c467e85a28de123e102b83b50"
+    },
+    {
+      "key": "jetta_smoke_6",
+      "path": "assets/characters/junin/special/jetta_smoke_6.png",
+      "bytes": 19068,
+      "sha256": "0650db1fbbfac98db13e1baff7f2c596630269572e7b5a8a0d6d7f2d8f411177"
+    },
+    {
+      "key": "jetta_smoke_7",
+      "path": "assets/characters/junin/special/jetta_smoke_7.png",
+      "bytes": 3961,
+      "sha256": "1e598b9593f298cc6a692ddc87fe7b7cf1768affd1af0826d4ccd2e1537e36ee"
+    },
+    {
+      "key": "jetta_impact_0",
+      "path": "assets/characters/junin/special/jetta_impact_0.png",
+      "bytes": 9907,
+      "sha256": "9b50388baf6dbbc6d6e0fe00472deb18e7e626376790a61cb7b2c8940c8e4fff"
+    },
+    {
+      "key": "jetta_impact_1",
+      "path": "assets/characters/junin/special/jetta_impact_1.png",
+      "bytes": 22874,
+      "sha256": "aa7f5652dd6709e1048e6362f29e542c08cc470b7bbe57138a7aee48541d1201"
+    },
+    {
+      "key": "jetta_impact_2",
+      "path": "assets/characters/junin/special/jetta_impact_2.png",
+      "bytes": 23180,
+      "sha256": "8cbf18ad7e957226d6b953209907cad39dca7c5741fda41b4dbd2a92439c4fbc"
+    },
+    {
+      "key": "jetta_impact_3",
+      "path": "assets/characters/junin/special/jetta_impact_3.png",
+      "bytes": 17797,
+      "sha256": "57b554d4d54c2083109f6bd32ce279360297c68ec648a37b699c02f4e9d64ad9"
+    },
+    {
+      "key": "jetta_impact_4",
+      "path": "assets/characters/junin/special/jetta_impact_4.png",
+      "bytes": 12680,
+      "sha256": "7421f738e37b6d7fc5decec9ec33392c21045d72f69254a4315c9d5f3b0f5b8f"
+    },
+    {
+      "key": "jetta_impact_5",
+      "path": "assets/characters/junin/special/jetta_impact_5.png",
+      "bytes": 19233,
+      "sha256": "92f2ead76818b7082f795649484efdf4fe9b93963100d60cdc1bcb202457900e"
+    },
+    {
+      "key": "jetta_impact_6",
+      "path": "assets/characters/junin/special/jetta_impact_6.png",
+      "bytes": 13910,
+      "sha256": "05a6e40b7f67cfd16a3348d531985c58502c3b3030585f18b91cbc319bec9e98"
+    },
+    {
+      "key": "jetta_impact_7",
+      "path": "assets/characters/junin/special/jetta_impact_7.png",
+      "bytes": 7899,
+      "sha256": "edc8eec45a2c7c54a15b5b2994a3b9c4f77536bbfaef7cd13e72dd8268a8e2a0"
+    },
+    {
+      "key": "junin_kick_0",
+      "path": "assets/characters/junin/junin_kick_0.png",
+      "bytes": 44441,
+      "sha256": "d3bebbaa5d216be39458d73a5afdf212fd45cae63535a81d5c3946a304a8e319"
+    },
+    {
+      "key": "junin_kick_1",
+      "path": "assets/characters/junin/junin_kick_1.png",
+      "bytes": 43519,
+      "sha256": "1d00a969d8418ca38b00a46153f27e634e5dfce3591aaf2584335289482352b4"
+    },
+    {
+      "key": "junin_kick_2",
+      "path": "assets/characters/junin/junin_kick_2.png",
+      "bytes": 42235,
+      "sha256": "fda78ca13e0ebd611b78d81d2f1414514d24772e9a10eb810ed6b0e3eb278425"
+    },
+    {
+      "key": "junin_kick_3",
+      "path": "assets/characters/junin/junin_kick_3.png",
+      "bytes": 39060,
+      "sha256": "a4490b91dc25633a36b9216a1997a7674a4185f2127ce8a4ad131cf4c0af26c6"
+    },
+    {
+      "key": "junin_kick_4",
+      "path": "assets/characters/junin/junin_kick_4.png",
+      "bytes": 40801,
+      "sha256": "dc005f7ae3e82642a8e4322c35efffdd49ba0361c132ea1ea57709766cb91765"
+    },
+    {
+      "key": "junin_kick_5",
+      "path": "assets/characters/junin/junin_kick_5.png",
+      "bytes": 41262,
+      "sha256": "b87a98346f467a89777cad27db9eeafae2ab9cf245ec9e418aec317b97cd0d5b"
+    },
+    {
+      "key": "junin_kick_6",
+      "path": "assets/characters/junin/junin_kick_6.png",
+      "bytes": 41846,
+      "sha256": "cfbb8b87240747d36fb37938b449361031364d3c869bc0c70fe76d85c3728d75"
+    },
+    {
+      "key": "junin_kick_7",
+      "path": "assets/characters/junin/junin_kick_7.png",
+      "bytes": 41691,
+      "sha256": "fb39036eed114f1ad3a9cbb8f985a57b9ccd9910bd1a792239a1b1b0d0ba2a4a"
+    },
+    {
+      "key": "junin_kick_8",
+      "path": "assets/characters/junin/junin_kick_8.png",
+      "bytes": 40883,
+      "sha256": "7a8cdf26c56bafb066732386b261575634e507cad42d0512916221b28d3ab4cd"
+    },
+    {
+      "key": "junin_kick_9",
+      "path": "assets/characters/junin/junin_kick_9.png",
+      "bytes": 38990,
+      "sha256": "23c2af6068c179a982042bedd2eb8217f43f0e00143e1bf43114313d0a0b9988"
+    },
+    {
+      "key": "junin_kick_10",
+      "path": "assets/characters/junin/junin_kick_10.png",
+      "bytes": 43840,
+      "sha256": "08e637724a199850ab0454c77469ac7c81bf6982ce75582e329f2277aaa12b9f"
+    },
+    {
+      "key": "junin_kick_11",
+      "path": "assets/characters/junin/junin_kick_11.png",
+      "bytes": 44768,
+      "sha256": "d4f54523d09399fcc7b15093158448ef983b3e4b480ce5d7d0dbf8baa18396c9"
+    },
+    {
+      "key": "junin_punch_0",
+      "path": "assets/characters/junin/junin_punch_0.png",
+      "bytes": 46480,
+      "sha256": "40c72588a2e999116009158ac0692a4d17f0fdac7dc4ac69a25a9a0f5f58b9a3"
+    },
+    {
+      "key": "junin_punch_1",
+      "path": "assets/characters/junin/junin_punch_1.png",
+      "bytes": 46825,
+      "sha256": "f34f3d1a8783f47e367515d6dfcc4e40e00a88955538102bf3d45aa78d11c385"
+    },
+    {
+      "key": "junin_punch_2",
+      "path": "assets/characters/junin/junin_punch_2.png",
+      "bytes": 51056,
+      "sha256": "32bb4487743d50372eea04ae88eaff8355a4fbb8d3c64e6da2567fd30361505f"
+    },
+    {
+      "key": "junin_punch_3",
+      "path": "assets/characters/junin/junin_punch_3.png",
+      "bytes": 49561,
+      "sha256": "d83b22f9abeea5164b05ab28d6aea68dc06bd27d23824272fabe8ee4c32a05a8"
+    },
+    {
+      "key": "junin_punch_4",
+      "path": "assets/characters/junin/junin_punch_4.png",
+      "bytes": 53778,
+      "sha256": "991a44d274c6cd9129bd150529690555a235f6709a69e0524deb4fdc9cbfca5f"
+    },
+    {
+      "key": "junin_punch_5",
+      "path": "assets/characters/junin/junin_punch_5.png",
+      "bytes": 53395,
+      "sha256": "1472334f89cabc28d9bbb5d9ae983076976b3e0e48529d205cfd04d4b67e2240"
+    },
+    {
+      "key": "junin_punch_6",
+      "path": "assets/characters/junin/junin_punch_6.png",
+      "bytes": 52332,
+      "sha256": "1429c7142bb58a525e18c37a98b050d61e5f1254fa2eec95345fbbc2ed1a43ad"
+    },
+    {
+      "key": "junin_punch_7",
+      "path": "assets/characters/junin/junin_punch_7.png",
+      "bytes": 51951,
+      "sha256": "c5afb84b99ae9bd38657deb4780359aa83c9f800439fac30a6c108b2f81991cd"
+    },
+    {
+      "key": "junin_punch_8",
+      "path": "assets/characters/junin/junin_punch_8.png",
+      "bytes": 45954,
+      "sha256": "c2ab60667ba4ecfdb636784bc38bd5719813a36bdd93afe58d4ac231668f76c2"
+    },
+    {
+      "key": "junin_punch_9",
+      "path": "assets/characters/junin/junin_punch_9.png",
+      "bytes": 45229,
+      "sha256": "611526476cd67fd779e2636fa757a2392e330972b25d73f073edd731362deecb"
+    },
+    {
+      "key": "junin_punch_10",
+      "path": "assets/characters/junin/junin_punch_10.png",
+      "bytes": 47280,
+      "sha256": "b9c261bf4aa0b246060996fbba5d4bb79a08c4b591625e63c5d6219c2a139a81"
+    },
+    {
+      "key": "junin_punch_11",
+      "path": "assets/characters/junin/junin_punch_11.png",
+      "bytes": 46534,
+      "sha256": "d20376102214a06d51012a11adb4b3770e40906d7f871dddbea020f946bddb0e"
+    },
+    {
+      "key": "junin_punch_12",
+      "path": "assets/characters/junin/junin_punch_12.png",
+      "bytes": 46997,
+      "sha256": "0e62f6633dd0f60fd65d8dbb69cb96fce3418ea1f1a5530fe190dc932c9408b1"
+    },
+    {
+      "key": "junin_crouch_0",
+      "path": "assets/characters/junin/junin_crouch_0.png",
+      "bytes": 58507,
+      "sha256": "1eaad04f336004243c734dbb97acd5d9e9f183334056aab6b85270a63fb35c38"
+    },
+    {
+      "key": "junin_crouch_1",
+      "path": "assets/characters/junin/junin_crouch_1.png",
+      "bytes": 56123,
+      "sha256": "fcf24e58477a79824f3655a4d4863057013799c07f45cbc17755c79bf1dbb014"
+    },
+    {
+      "key": "junin_crouch_2",
+      "path": "assets/characters/junin/junin_crouch_2.png",
+      "bytes": 54296,
+      "sha256": "b7b667e72ecf6ec25b6956c4f4cc42501fad27ba1ee8cbb0964fcbc87072ce65"
+    },
+    {
+      "key": "junin_crouch_3",
+      "path": "assets/characters/junin/junin_crouch_3.png",
+      "bytes": 49681,
+      "sha256": "1908c48190e667925f8edd5139a83389edcb1e4a42bd21880604e9731f9ba681"
+    },
+    {
+      "key": "junin_crouch_4",
+      "path": "assets/characters/junin/junin_crouch_4.png",
+      "bytes": 48618,
+      "sha256": "c7b387bd27a889aef3dfc65395e767027f226fe9d197f031dfc14967d4ba45a7"
+    },
+    {
+      "key": "junin_crouch_5",
+      "path": "assets/characters/junin/junin_crouch_5.png",
+      "bytes": 45391,
+      "sha256": "d62ac7e5f0a152560b296e1824cba79f2d4d5828adf454089234bba9a60ddb75"
+    },
+    {
+      "key": "junin_crouch_6",
+      "path": "assets/characters/junin/junin_crouch_6.png",
+      "bytes": 44501,
+      "sha256": "5570e4ab3907a682c4d7af5b484a4faa90bd4dbe8f28b030cc7ff69786dd13ef"
+    },
+    {
+      "key": "junin_crouch_7",
+      "path": "assets/characters/junin/junin_crouch_7.png",
+      "bytes": 48097,
+      "sha256": "336b3e4011517c66efc19c791a460341a5b4f77a4d2a47d062b953b30648392f"
+    },
+    {
+      "key": "junin_crouch_8",
+      "path": "assets/characters/junin/junin_crouch_8.png",
+      "bytes": 51665,
+      "sha256": "aaa5480a0ae1c3b6adefadb2be3afbb558319921692aa4c5b96720e77dbc909f"
+    },
+    {
+      "key": "junin_crouch_9",
+      "path": "assets/characters/junin/junin_crouch_9.png",
+      "bytes": 56099,
+      "sha256": "f63c8fafcaf902b387a4c2f8d4286abc93215073ffb0a3dee6578bdb9883e5c3"
+    },
+    {
+      "key": "junin_crouch_10",
+      "path": "assets/characters/junin/junin_crouch_10.png",
+      "bytes": 57639,
+      "sha256": "0d22d668974843f5bec74893791d220fb546b5ea49581f8a80044805c2a8baa4"
+    },
+    {
+      "key": "junin_crouch_11",
+      "path": "assets/characters/junin/junin_crouch_11.png",
+      "bytes": 57661,
+      "sha256": "ae45675ad8e98da84f34152ce47ef8e54ec2f980213ae8a1b1bbf45de2708a67"
+    },
+    {
+      "key": "junin_jump_0",
+      "path": "assets/characters/junin/junin_jump_0.png",
+      "bytes": 53668,
+      "sha256": "c9201474ee9fe6e6210052fd5a8cba51fe0b1edbe3bbe597e174165fa0212abe"
+    },
+    {
+      "key": "junin_jump_1",
+      "path": "assets/characters/junin/junin_jump_1.png",
+      "bytes": 51378,
+      "sha256": "08f4bbeac9fa45f7d18ef1e71f3be1a4e8be768044b103c4e2bb2c5e6c813fa3"
+    },
+    {
+      "key": "junin_jump_2",
+      "path": "assets/characters/junin/junin_jump_2.png",
+      "bytes": 50614,
+      "sha256": "1d36cab0e5b29edd40d2c5179d4a4fdfbb9f6127a8f9510ce79123b6b3bedd72"
+    },
+    {
+      "key": "junin_jump_3",
+      "path": "assets/characters/junin/junin_jump_3.png",
+      "bytes": 51388,
+      "sha256": "fae35c8be3af111e2147c9b53c4f266332ac290d5fd307ef79d928bdb604061d"
+    },
+    {
+      "key": "junin_jump_4",
+      "path": "assets/characters/junin/junin_jump_4.png",
+      "bytes": 49826,
+      "sha256": "3279c237644019fd0009ad708ae390ded798fc19d0b1569d438c6e2e63fe3d0f"
+    },
+    {
+      "key": "junin_jump_5",
+      "path": "assets/characters/junin/junin_jump_5.png",
+      "bytes": 50794,
+      "sha256": "757f6154eb224f2ca3d857bb91c9f5db08a5a2e494f7e2b6b314180f75ffcb43"
+    },
+    {
+      "key": "junin_jump_6",
+      "path": "assets/characters/junin/junin_jump_6.png",
+      "bytes": 50875,
+      "sha256": "952300978d946b046c19e9d4035eacebb39d9a13a5d430601540ce6a222cd1c5"
+    },
+    {
+      "key": "junin_jump_7",
+      "path": "assets/characters/junin/junin_jump_7.png",
+      "bytes": 53683,
+      "sha256": "6131bec3449efc6939d1a6b0a9e73dd16d72f614186e5554316099f1529f4cac"
+    },
+    {
+      "key": "junin_jump_8",
+      "path": "assets/characters/junin/junin_jump_8.png",
+      "bytes": 50047,
+      "sha256": "1372d8a389d235e7294d3f1b0c7a163a32ccbc38b72b52851cf294e1c34e1354"
+    },
+    {
+      "key": "junin_jump_9",
+      "path": "assets/characters/junin/junin_jump_9.png",
+      "bytes": 50978,
+      "sha256": "9ae7d62e8b2d69fe37837e54ea03df8fab93a38c427b22935129e2a58c2f7c8b"
+    },
+    {
+      "key": "junin_jump_10",
+      "path": "assets/characters/junin/junin_jump_10.png",
+      "bytes": 51653,
+      "sha256": "0eb04fa8d1d56857c7a34eb7f965f80f80e5ae5cb309575c62d51aed8b09702e"
+    },
+    {
+      "key": "junin_jump_11",
+      "path": "assets/characters/junin/junin_jump_11.png",
+      "bytes": 53047,
+      "sha256": "63ee3709901442fa25ff663d2a9b040736d62e71ada3e8d79c3c163cc1ff2f5d"
+    },
+    {
+      "key": "junin_walk_0",
+      "path": "assets/characters/junin/junin_walk_0.png",
+      "bytes": 25633,
+      "sha256": "28595ac112a1c07cf9b67d04ca99456c44538c887e4f2f7abb9fad47ecfa43e4"
+    },
+    {
+      "key": "junin_walk_1",
+      "path": "assets/characters/junin/junin_walk_1.png",
+      "bytes": 25419,
+      "sha256": "9e93d45da614227ef4e9450c2db26e31417a87e07de17c3f31555db54277de35"
+    },
+    {
+      "key": "junin_walk_2",
+      "path": "assets/characters/junin/junin_walk_2.png",
+      "bytes": 24838,
+      "sha256": "947ca4180dba74bf0c92c36c1c833e63562793ad4fc44e11fbef2bb64245609a"
+    },
+    {
+      "key": "junin_walk_3",
+      "path": "assets/characters/junin/junin_walk_3.png",
+      "bytes": 24788,
+      "sha256": "068bd844ef0b6cb4bf3d8934e08862780f89b5a5862a3092d55b85511f9c8b47"
+    },
+    {
+      "key": "junin_walk_4",
+      "path": "assets/characters/junin/junin_walk_4.png",
+      "bytes": 25391,
+      "sha256": "6d82c71cd9ceca5885d96809831f2be01df95280f1a6dce004f509491a7dc6b6"
+    },
+    {
+      "key": "junin_walk_5",
+      "path": "assets/characters/junin/junin_walk_5.png",
+      "bytes": 25027,
+      "sha256": "bc8aff3631199ccc09ad27a0304365a7710c0322f254b580f125e6935e140afb"
+    },
+    {
+      "key": "junin_walk_6",
+      "path": "assets/characters/junin/junin_walk_6.png",
+      "bytes": 25262,
+      "sha256": "b51c72cd4fd468c49b1a55eef8a5c2e29607c9ef16e14222b17ad9da0fc3634a"
+    },
+    {
+      "key": "junin_walk_7",
+      "path": "assets/characters/junin/junin_walk_7.png",
+      "bytes": 21590,
+      "sha256": "4a795f0bf9d63a0619a06cc30ce6a196763c4983c90d2e021271c386ad5fc2e7"
+    },
+    {
+      "key": "junin_walk_8",
+      "path": "assets/characters/junin/junin_walk_8.png",
+      "bytes": 22477,
+      "sha256": "168d6ab0a67895fdc82efa8d83a6f30bb8ba2f3b3517430ed409b742d7abab03"
+    },
+    {
+      "key": "junin_walk_9",
+      "path": "assets/characters/junin/junin_walk_9.png",
+      "bytes": 23327,
+      "sha256": "f953c3ded0601c50094475e4659b58bf9f8179d847818198e4e25b5ef0764b22"
+    },
+    {
+      "key": "junin_walk_10",
+      "path": "assets/characters/junin/junin_walk_10.png",
+      "bytes": 21142,
+      "sha256": "476c68000e74fefe878d42d29cdb0af3638232eee1b67df02728083887df21a9"
+    },
+    {
+      "key": "junin_walk_11",
+      "path": "assets/characters/junin/junin_walk_11.png",
+      "bytes": 23009,
+      "sha256": "cde0714068b7e90d16bd1560c57802fdcf62f9395cd7417e267f6e996df0ab44"
+    },
+    {
+      "key": "junin_stance_0",
+      "path": "assets/characters/junin/junin_stance_0.png",
+      "bytes": 26480,
+      "sha256": "b985cfd7af0d2304559da0aca5fb85d154b0d4499afcb6c1dccc9afbe5d22cc8"
+    },
+    {
+      "key": "junin_stance_1",
+      "path": "assets/characters/junin/junin_stance_1.png",
+      "bytes": 26652,
+      "sha256": "fc94b6de7c3baa778756bae1f17903485687c99e20fd2c23ed9878288e5341fc"
+    },
+    {
+      "key": "junin_stance_2",
+      "path": "assets/characters/junin/junin_stance_2.png",
+      "bytes": 27028,
+      "sha256": "74e3b15f6986cb713743698bfd3b247fd3cd474506461b8edfadb965116d4f27"
+    },
+    {
+      "key": "junin_stance_3",
+      "path": "assets/characters/junin/junin_stance_3.png",
+      "bytes": 27029,
+      "sha256": "1fb4752b416484f495016c81cdeeb36967f6d2389df96565ff9e70f57ea9f297"
+    },
+    {
+      "key": "junin_stance_4",
+      "path": "assets/characters/junin/junin_stance_4.png",
+      "bytes": 26895,
+      "sha256": "59e68416c832d49661c1229c7a2086ba84e4a14f643ff5ff83e355836978aeac"
+    },
+    {
+      "key": "junin_stance_5",
+      "path": "assets/characters/junin/junin_stance_5.png",
+      "bytes": 26999,
+      "sha256": "f7cafdd3c69828890d0f566a79075db99aa181b74b0049a8cbb8757c6f0c78ee"
+    },
+    {
+      "key": "junin_stance_6",
+      "path": "assets/characters/junin/junin_stance_6.png",
+      "bytes": 26408,
+      "sha256": "7eaac2035995512dd2035c3377166680fbe7c9fe1fa6be4c4af8b8b0018d472d"
+    },
+    {
+      "key": "junin_stance_7",
+      "path": "assets/characters/junin/junin_stance_7.png",
+      "bytes": 26209,
+      "sha256": "e474f3ae67479ea9431f16ba594742dbefa8ad74e778056cadd2fc3fc4ace706"
+    },
+    {
+      "key": "junin_stance_8",
+      "path": "assets/characters/junin/junin_stance_8.png",
+      "bytes": 26453,
+      "sha256": "77e5ce5c036e9a03a6d4648988b71d2bd2896581c16c5f477ed0e828042999ae"
+    },
+    {
+      "key": "junin_stance_9",
+      "path": "assets/characters/junin/junin_stance_9.png",
+      "bytes": 26242,
+      "sha256": "ef0f06ba050da8f838d007da4549301f94b963304f5c5baf4227b12d8d0296a1"
+    },
+    {
+      "key": "junin_stance_10",
+      "path": "assets/characters/junin/junin_stance_10.png",
+      "bytes": 26231,
+      "sha256": "9e4945e001f405c296b4411c2994b376860091e915634dfb5379b0ec87eebdc8"
+    },
+    {
+      "key": "junin_stance_11",
+      "path": "assets/characters/junin/junin_stance_11.png",
+      "bytes": 26453,
+      "sha256": "5c8ad515566ef6f405290e8b6c0538ef4dba3417f9ee37b582ca110684b4b562"
+    },
+    {
+      "key": "junin_defense_0",
+      "path": "assets/characters/junin/junin_defense_0.png",
+      "bytes": 90662,
+      "sha256": "8569e1bdf4e33188a873af100a9d7a0d3784bba09b175ddacf11bb66fb7b0eee"
+    },
+    {
+      "key": "junin_defense_1",
+      "path": "assets/characters/junin/junin_defense_1.png",
+      "bytes": 91235,
+      "sha256": "5eb01b40f571d0207cf489784c7ba1c1adadb0aef2149fe2323ab745dccd9020"
+    },
+    {
+      "key": "junin_defense_2",
+      "path": "assets/characters/junin/junin_defense_2.png",
+      "bytes": 89767,
+      "sha256": "32eb308383c318a4c76a0e5dc30af2ca448dd950a61009a40f1387f9e669a1d4"
+    },
+    {
+      "key": "junin_defense_3",
+      "path": "assets/characters/junin/junin_defense_3.png",
+      "bytes": 86425,
+      "sha256": "a6cbaf5a7591bc2e0df9282feca02298dcdd7fc5bf6564934d15ce90cd705542"
+    },
+    {
+      "key": "junin_defense_4",
+      "path": "assets/characters/junin/junin_defense_4.png",
+      "bytes": 78998,
+      "sha256": "3ba6ba15b6d0bbd690b6136f04991ca6eb6d5bc484d557c3af485f2003b34af5"
+    },
+    {
+      "key": "junin_defense_5",
+      "path": "assets/characters/junin/junin_defense_5.png",
+      "bytes": 88766,
+      "sha256": "2b222f919c2d186e909c21315713647268f2728b1760e65e2877e0c77944c796"
+    },
+    {
+      "key": "junin_defense_6",
+      "path": "assets/characters/junin/junin_defense_6.png",
+      "bytes": 88437,
+      "sha256": "25b7fe2734a04e5464dc187bb201e63f1afd8a64992e873aed5fda829d58608d"
+    },
+    {
+      "key": "junin_defense_7",
+      "path": "assets/characters/junin/junin_defense_7.png",
+      "bytes": 88815,
+      "sha256": "01a9d29100191e82aa484b9487fceb75f5b40c02923fe7402aa4270ba272bbee"
+    },
+    {
+      "key": "junin_defense_8",
+      "path": "assets/characters/junin/junin_defense_8.png",
+      "bytes": 90826,
+      "sha256": "3a3953172a2aa23707930edc63431c5f7dd66af4d36b752a14cbd4c63bf79ce5"
+    },
+    {
+      "key": "junin_defense_9",
+      "path": "assets/characters/junin/junin_defense_9.png",
+      "bytes": 91691,
+      "sha256": "8c58ee1e179cf05b53ba70eea3084474e44e1018944cf0bcda2fcef6bfecb480"
+    },
+    {
+      "key": "junin_defense_10",
+      "path": "assets/characters/junin/junin_defense_10.png",
+      "bytes": 89750,
+      "sha256": "07e105b6417c2f5a7ed9386b145fbd4f67fe15c829de082a982c338f65677604"
+    },
+    {
+      "key": "junin_defense_11",
+      "path": "assets/characters/junin/junin_defense_11.png",
+      "bytes": 86808,
+      "sha256": "19f0dbbe4f09be36ced868a3089ff851a6eda7295bcb8e134b96dc5b71957de7"
+    },
+    {
+      "key": "junin_defense_12",
+      "path": "assets/characters/junin/junin_defense_12.png",
+      "bytes": 86746,
+      "sha256": "891c15a4e506c83a69ec691338c6dd95fe7925ae1fbdc39de948815a481d83a5"
+    },
+    {
+      "key": "junin_defense_13",
+      "path": "assets/characters/junin/junin_defense_13.png",
+      "bytes": 89057,
+      "sha256": "1f62dace0d3d8ef819de2860d329e6252ffda5cc3cc6e2b08ccff06021e5b38d"
+    },
+    {
+      "key": "chila_defense_0",
+      "path": "assets/characters/chila/chila_defense_0.png",
+      "bytes": 94974,
+      "sha256": "c1366f5ed301de94d7b7b037b09ecb7f4dc704514e4f42cb207b7979483e8713"
+    },
+    {
+      "key": "chila_defense_1",
+      "path": "assets/characters/chila/chila_defense_1.png",
+      "bytes": 96423,
+      "sha256": "fe8871076403e08ca9d278a8fb3dcf637c7ae9bd3722973e58db0ef6a3c97f10"
+    },
+    {
+      "key": "chila_defense_2",
+      "path": "assets/characters/chila/chila_defense_2.png",
+      "bytes": 94857,
+      "sha256": "1dc48cb44758008931be2f1aa1bbe3fe90cf08921862cdc45d9ac25574688063"
+    },
+    {
+      "key": "chila_defense_3",
+      "path": "assets/characters/chila/chila_defense_3.png",
+      "bytes": 97646,
+      "sha256": "c284e56569f089eaa54d383a4938fc2acf0b4879171fb6a0a5fc0b291c6809c8"
+    },
+    {
+      "key": "chila_defense_4",
+      "path": "assets/characters/chila/chila_defense_4.png",
+      "bytes": 95206,
+      "sha256": "2231335cc74ae3af3f2fd4ab603afac8d5ec40220d0b21ea9fd08b65b7c8869f"
+    },
+    {
+      "key": "chila_defense_5",
+      "path": "assets/characters/chila/chila_defense_5.png",
+      "bytes": 95602,
+      "sha256": "525a54f2a9a4027e6e248a494dcde3e15f5dd9fff5518debdcbee2db9d17f9b3"
+    },
+    {
+      "key": "chila_defense_6",
+      "path": "assets/characters/chila/chila_defense_6.png",
+      "bytes": 94720,
+      "sha256": "d8e2ae17f31b1c94671f1672501b25654442970613444427ba874c5bd8cd2250"
+    },
+    {
+      "key": "chila_defense_7",
+      "path": "assets/characters/chila/chila_defense_7.png",
+      "bytes": 94815,
+      "sha256": "d50ffdf39b4318f610fba932c5347e34f4ca0127986b9519675534016178970c"
+    },
+    {
+      "key": "chila_defense_8",
+      "path": "assets/characters/chila/chila_defense_8.png",
+      "bytes": 96505,
+      "sha256": "14d4b6b78233e1d401d9b886e16e3ef2c911ef16ec48a8bcd2ddb4635b29a8af"
+    },
+    {
+      "key": "chila_defense_9",
+      "path": "assets/characters/chila/chila_defense_9.png",
+      "bytes": 94833,
+      "sha256": "a50d15b970b41b27fd6e2b267eec14e5d7dccedd9c59438cfaf84971a24880a2"
+    },
+    {
+      "key": "chila_defense_10",
+      "path": "assets/characters/chila/chila_defense_10.png",
+      "bytes": 96936,
+      "sha256": "7f4ab5b957f3b7b5e600e87ad24fc01ddeb77115d152b79c2fda6ee7d35b84ed"
+    },
+    {
+      "key": "chila_defense_11",
+      "path": "assets/characters/chila/chila_defense_11.png",
+      "bytes": 96506,
+      "sha256": "adbe55ec62b7e4fec160180dccdff2728986f90b484184be74e6f1d5483f1c03"
+    },
+    {
+      "key": "chila_crouch_0",
+      "path": "assets/characters/chila/chila_crouch_0.png",
+      "bytes": 98566,
+      "sha256": "632a02b8155e73aa7aa220dd95e0af9b313fdda7a6916e2c9e41645ac730bd50"
+    },
+    {
+      "key": "chila_crouch_1",
+      "path": "assets/characters/chila/chila_crouch_1.png",
+      "bytes": 97904,
+      "sha256": "5e96ad99c4773f264b1264f001d873514850ec730a8d5b0ea2d22d9a88815a58"
+    },
+    {
+      "key": "chila_crouch_2",
+      "path": "assets/characters/chila/chila_crouch_2.png",
+      "bytes": 94515,
+      "sha256": "3514a912466dab3c6ad25b783849277afccef920e535f10642d65616491a66d7"
+    },
+    {
+      "key": "chila_crouch_3",
+      "path": "assets/characters/chila/chila_crouch_3.png",
+      "bytes": 89411,
+      "sha256": "fd611facf79c9d3fbf0e44dcb9c5649cf25eb49e7411e2b1cf9fecf5b546a46c"
+    },
+    {
+      "key": "chila_crouch_4",
+      "path": "assets/characters/chila/chila_crouch_4.png",
+      "bytes": 85570,
+      "sha256": "d367d1235b03859eb38126910a246786cf0dc59ab24d82d8a0da6f8ea9b1ba56"
+    },
+    {
+      "key": "chila_crouch_5",
+      "path": "assets/characters/chila/chila_crouch_5.png",
+      "bytes": 80969,
+      "sha256": "0f5d370292f1556925e29c16339e8b9c244fac8d5ac38aa2b04c9e94803608b6"
+    },
+    {
+      "key": "chila_crouch_6",
+      "path": "assets/characters/chila/chila_crouch_6.png",
+      "bytes": 86270,
+      "sha256": "e81018158aaccf1ed47ca68f48e3905b54f9d2275c42012d83b5939e5cabcfe2"
+    },
+    {
+      "key": "chila_crouch_7",
+      "path": "assets/characters/chila/chila_crouch_7.png",
+      "bytes": 85975,
+      "sha256": "da89ca85708e1658861861ee3ba01df9a3016cfc1683102f23eb671a5d46a7e8"
+    },
+    {
+      "key": "chila_crouch_8",
+      "path": "assets/characters/chila/chila_crouch_8.png",
+      "bytes": 90795,
+      "sha256": "ceca3aa808d6644b1ae31bee4056c4c514470a50e1d39ec29c66bc4e38f5c9d6"
+    },
+    {
+      "key": "chila_crouch_9",
+      "path": "assets/characters/chila/chila_crouch_9.png",
+      "bytes": 97175,
+      "sha256": "422321ce41458f9807898980a5ab125f401368ddff5bb8bb0ce379bb7babd2d5"
+    },
+    {
+      "key": "chila_crouch_10",
+      "path": "assets/characters/chila/chila_crouch_10.png",
+      "bytes": 100167,
+      "sha256": "6e2c32d4645919449e90888bf1d394750d57d45f0b583feea92de2e883663e3b"
+    },
+    {
+      "key": "chila_crouch_11",
+      "path": "assets/characters/chila/chila_crouch_11.png",
+      "bytes": 102471,
+      "sha256": "85895e800f0f3dfbb2ed5d88d9c5dbd350333b1b19c60139a1ccc2681bfa56f8"
+    },
+    {
+      "key": "chila_jump_0",
+      "path": "assets/characters/chila/chila_jump_0.png",
+      "bytes": 90451,
+      "sha256": "8934158238dade4856d28a9ebe40ac81d99ab2baca0a7e72a32e0c9fdb7388a5"
+    },
+    {
+      "key": "chila_jump_1",
+      "path": "assets/characters/chila/chila_jump_1.png",
+      "bytes": 87008,
+      "sha256": "afc75f77629cef5259e3ddf15f18496bb06aac33f476626705cc4af1fd466fcb"
+    },
+    {
+      "key": "chila_jump_2",
+      "path": "assets/characters/chila/chila_jump_2.png",
+      "bytes": 74645,
+      "sha256": "c6661b7e29cd3cc769254ef81994dcc32866c7684064aa6bd5842404573ec426"
+    },
+    {
+      "key": "chila_jump_3",
+      "path": "assets/characters/chila/chila_jump_3.png",
+      "bytes": 83640,
+      "sha256": "9cc5184a2c9ff19bbd19aa806f7d35d9e16e588a0e22d1f5357510f09bcde4bb"
+    },
+    {
+      "key": "chila_jump_4",
+      "path": "assets/characters/chila/chila_jump_4.png",
+      "bytes": 79503,
+      "sha256": "d9d835dee11d84669df1965920e7738bc60d52f6ee921a1ef7944d97fd7e9eb1"
+    },
+    {
+      "key": "chila_jump_5",
+      "path": "assets/characters/chila/chila_jump_5.png",
+      "bytes": 77141,
+      "sha256": "168e09875be3920c672f76b7eb55f4468be6d8c2f9393c57b883e6b325214e66"
+    },
+    {
+      "key": "chila_jump_6",
+      "path": "assets/characters/chila/chila_jump_6.png",
+      "bytes": 68998,
+      "sha256": "cbc6d958a469819127d26a96f279e354da674448bc8bb7bd90bc250cc465af0b"
+    },
+    {
+      "key": "chila_jump_7",
+      "path": "assets/characters/chila/chila_jump_7.png",
+      "bytes": 78611,
+      "sha256": "4b7b2de741c1980359682ae888724cdc0f5eec1c4999c24c965898e06640c8e5"
+    },
+    {
+      "key": "chila_jump_8",
+      "path": "assets/characters/chila/chila_jump_8.png",
+      "bytes": 74867,
+      "sha256": "124232c28849195dc1500c7e422045c4aa55b6e7a2ffc8d5bacfeeef7d5bc21b"
+    },
+    {
+      "key": "chila_jump_9",
+      "path": "assets/characters/chila/chila_jump_9.png",
+      "bytes": 73069,
+      "sha256": "09c54e72bbf0077c61380510551b3814f1b1473540fa2912fc5fac376d6c2260"
+    },
+    {
+      "key": "chila_jump_10",
+      "path": "assets/characters/chila/chila_jump_10.png",
+      "bytes": 80394,
+      "sha256": "1de8d663159ea56eb0a9c35b9129f68d8d229dc9c72e17f605c58c7658bb29e4"
+    },
+    {
+      "key": "chila_jump_11",
+      "path": "assets/characters/chila/chila_jump_11.png",
+      "bytes": 86592,
+      "sha256": "28aee4c7e0406e1b46c51695d6c2e6bd430969d4e36b70b0d47eff1b1a6ce9ea"
+    },
+    {
+      "key": "chila_kick_0",
+      "path": "assets/characters/chila/chila_kick_0.png",
+      "bytes": 106984,
+      "sha256": "a663318508bba9f78728269d9e187add74a2bf40198971b917b97c07212e552a"
+    },
+    {
+      "key": "chila_kick_1",
+      "path": "assets/characters/chila/chila_kick_1.png",
+      "bytes": 106160,
+      "sha256": "0cbaa5d628b1b17cf558cd330e9c07c915ff4754ce31e04d17a6588943ba4349"
+    },
+    {
+      "key": "chila_kick_2",
+      "path": "assets/characters/chila/chila_kick_2.png",
+      "bytes": 99528,
+      "sha256": "795d06de959abb7eb980579aceb866ab40a8a74db774542f5290c7ee7ac6f83b"
+    },
+    {
+      "key": "chila_kick_3",
+      "path": "assets/characters/chila/chila_kick_3.png",
+      "bytes": 100892,
+      "sha256": "da17df32fc6f53fc8c6674482204cf44cfafc0d605f76bdaa5145378bb4ad7b6"
+    },
+    {
+      "key": "chila_kick_4",
+      "path": "assets/characters/chila/chila_kick_4.png",
+      "bytes": 102893,
+      "sha256": "8e996805ae0e0afb0447f68806d2c04f518c0fedf985d2c7f7114e77bbfb7b1b"
+    },
+    {
+      "key": "chila_kick_5",
+      "path": "assets/characters/chila/chila_kick_5.png",
+      "bytes": 105289,
+      "sha256": "4fcc1d569d4fa5884d208c2ba04098a26cf02ba95246ea2f2108d00148628ca1"
+    },
+    {
+      "key": "chila_kick_6",
+      "path": "assets/characters/chila/chila_kick_6.png",
+      "bytes": 96252,
+      "sha256": "36e82db6c635c6cd37e74157162b97cc35dd761fb9ea233d14df3e2f3edb2db4"
+    },
+    {
+      "key": "chila_kick_7",
+      "path": "assets/characters/chila/chila_kick_7.png",
+      "bytes": 90677,
+      "sha256": "1ad0bb8a42d810b76f22b0edde07ff4d62827438374ace80109b1a5a7a2c094f"
+    },
+    {
+      "key": "chila_kick_8",
+      "path": "assets/characters/chila/chila_kick_8.png",
+      "bytes": 94390,
+      "sha256": "6b9530506124bdea50b03a1868e5a58d12b511a8eb350bcfe4f0814a823dc1e9"
+    },
+    {
+      "key": "chila_kick_9",
+      "path": "assets/characters/chila/chila_kick_9.png",
+      "bytes": 96174,
+      "sha256": "57d75310bf07abcfc886117f61f9c2e133f5662d6e69bc7c2d784343d5459122"
+    },
+    {
+      "key": "chila_kick_10",
+      "path": "assets/characters/chila/chila_kick_10.png",
+      "bytes": 103659,
+      "sha256": "46f990259169630fc4e3b452cd2471340f47a8777e1fd5e81c0f3a122de04b26"
+    },
+    {
+      "key": "chila_kick_11",
+      "path": "assets/characters/chila/chila_kick_11.png",
+      "bytes": 107128,
+      "sha256": "e8286d17217d68dfbaaa89ffe05b384bf70a9ca2dac7a77e6b6b52250a235de8"
+    },
+    {
+      "key": "chila_punch_0",
+      "path": "assets/characters/chila/chila_punch_0.png",
+      "bytes": 107894,
+      "sha256": "832a13690c4744a0d2bc585bdde555a0b3bc637a9b0cfa8676d35c013c61d963"
+    },
+    {
+      "key": "chila_punch_1",
+      "path": "assets/characters/chila/chila_punch_1.png",
+      "bytes": 109164,
+      "sha256": "f5f4f88c316e8fe4ebcbad077f34d1c93387cce71d518e5f7752ef4c22e6a671"
+    },
+    {
+      "key": "chila_punch_2",
+      "path": "assets/characters/chila/chila_punch_2.png",
+      "bytes": 111287,
+      "sha256": "35cedfb48e489b2e35995e8fe28fd2704dac034af33e872604d0bd48c8484338"
+    },
+    {
+      "key": "chila_punch_3",
+      "path": "assets/characters/chila/chila_punch_3.png",
+      "bytes": 109518,
+      "sha256": "37a5220ac5ab3355ff8194821870d12d976bbebd1b5e461eacf638bab120a9cd"
+    },
+    {
+      "key": "chila_punch_4",
+      "path": "assets/characters/chila/chila_punch_4.png",
+      "bytes": 112428,
+      "sha256": "60fdaa20a7929047df41ce653342550753f34f4d570fade449b4cc9c3d19359c"
+    },
+    {
+      "key": "chila_punch_5",
+      "path": "assets/characters/chila/chila_punch_5.png",
+      "bytes": 103448,
+      "sha256": "68a750a23867eec5f9ec605258c0efc62ab6c2a2ffa1df1424e93a8c93348d3c"
+    },
+    {
+      "key": "chila_punch_6",
+      "path": "assets/characters/chila/chila_punch_6.png",
+      "bytes": 112876,
+      "sha256": "bed42a683160f4ef701b1542d65b29016eec13cd2d3b23671f3ddf3e2a45012c"
+    },
+    {
+      "key": "chila_punch_7",
+      "path": "assets/characters/chila/chila_punch_7.png",
+      "bytes": 106785,
+      "sha256": "348d236d9f67c2dd372d6b50428f23fbf0a700c0f52e5754c4e0de09551fd1d9"
+    },
+    {
+      "key": "chila_punch_8",
+      "path": "assets/characters/chila/chila_punch_8.png",
+      "bytes": 112864,
+      "sha256": "3f8f8060bcec3559df5c360be3c6b1e351ab5e0b2679a8caf333526d55d1a1fc"
+    },
+    {
+      "key": "chila_punch_9",
+      "path": "assets/characters/chila/chila_punch_9.png",
+      "bytes": 111075,
+      "sha256": "b7bbb13d61ec3cee4e0b5c01b25e001afe9fdfcc11953ed6105e25d5811bfe80"
+    },
+    {
+      "key": "chila_punch_10",
+      "path": "assets/characters/chila/chila_punch_10.png",
+      "bytes": 110600,
+      "sha256": "5059f4cc1d73c2e3b0ab7d1a79e1deb621f0bbf3720815a7b7f9a13521d71a68"
+    },
+    {
+      "key": "chila_punch_11",
+      "path": "assets/characters/chila/chila_punch_11.png",
+      "bytes": 109549,
+      "sha256": "67862419cfe4e7a69ad33b0f82b031d6118179c1ce6a74764234bd6bdde7b517"
+    },
+    {
+      "key": "chila_walk_0",
+      "path": "assets/characters/chila/chila_walk_0.png",
+      "bytes": 97833,
+      "sha256": "6a40245c20d75616fb8282e133db45075d2692c5297485e1a8a3083d42f6ff08"
+    },
+    {
+      "key": "chila_walk_1",
+      "path": "assets/characters/chila/chila_walk_1.png",
+      "bytes": 93894,
+      "sha256": "559dd517e702e2b49a24d9c993343bd96ace98a8b9f5e807ab2f8bcbcc55d4b0"
+    },
+    {
+      "key": "chila_walk_2",
+      "path": "assets/characters/chila/chila_walk_2.png",
+      "bytes": 96791,
+      "sha256": "30db3aa582a263f23255a39a3e0c7850996e886fc241caef4d91fd0b9d0dbfb4"
+    },
+    {
+      "key": "chila_walk_3",
+      "path": "assets/characters/chila/chila_walk_3.png",
+      "bytes": 99886,
+      "sha256": "81e0b290490dab91514111197834ed09b917a6f9c7659d245adf861ff411023c"
+    },
+    {
+      "key": "chila_walk_4",
+      "path": "assets/characters/chila/chila_walk_4.png",
+      "bytes": 96089,
+      "sha256": "ac692909bbe2446a54a32a4c0cbaf189d3332197759945ccd833252d88111847"
+    },
+    {
+      "key": "chila_walk_5",
+      "path": "assets/characters/chila/chila_walk_5.png",
+      "bytes": 94855,
+      "sha256": "b1d2e013e768fe20107185b06ae9ce45e69c359111460b8e0d0a74fbcd6d532c"
+    },
+    {
+      "key": "chila_walk_6",
+      "path": "assets/characters/chila/chila_walk_6.png",
+      "bytes": 93827,
+      "sha256": "da694b523ca1ce457cc3b593d9e9eb79224d3205da0e6c2de6c69c6833017b4a"
+    },
+    {
+      "key": "chila_walk_7",
+      "path": "assets/characters/chila/chila_walk_7.png",
+      "bytes": 94175,
+      "sha256": "fefad20a7a2352dd5b2c6bd3170d340aeef5edd6465bd91947d1bf75146d9159"
+    },
+    {
+      "key": "chila_walk_8",
+      "path": "assets/characters/chila/chila_walk_8.png",
+      "bytes": 95450,
+      "sha256": "65cc5ba26119c5d53e1c5d78cee5e095f7273c72b389e6c796ce314dd53b8fdb"
+    },
+    {
+      "key": "chila_walk_9",
+      "path": "assets/characters/chila/chila_walk_9.png",
+      "bytes": 93370,
+      "sha256": "4ec343fcbde7bccaec75d9ad9bb1556f458b5151a93ba2475f02207aee00ac0f"
+    },
+    {
+      "key": "chila_walk_10",
+      "path": "assets/characters/chila/chila_walk_10.png",
+      "bytes": 96317,
+      "sha256": "a28b42af1680e4ade8096235477e4b6bb66e98cc0f178fb09322d4d25e935b0d"
+    },
+    {
+      "key": "chila_walk_11",
+      "path": "assets/characters/chila/chila_walk_11.png",
+      "bytes": 95046,
+      "sha256": "26574282002706d84674b2a9de3a85b6a6ae6f3a81e74eddaf10bb7933032d5a"
+    },
+    {
+      "key": "chila_stance_9",
+      "path": "assets/characters/chila/chila_stance_9.png",
+      "bytes": 151058,
+      "sha256": "1d68be0bf1e57cfcb94ef5ea90d67e82cce6355ad66342d1b4e2f2e50ea8c7d1"
+    },
+    {
+      "key": "chila_stance_10",
+      "path": "assets/characters/chila/chila_stance_10.png",
+      "bytes": 147350,
+      "sha256": "1b7059a439ef00612aa43cd3a09f007f5478c6842470042ea86a0eb3e833c564"
+    },
+    {
+      "key": "chila_stance_11",
+      "path": "assets/characters/chila/chila_stance_11.png",
+      "bytes": 149085,
+      "sha256": "330089743efa1eab152c1068578d9ea790ea658cbfd3b4dbbe16de8c353860d9"
+    },
+    {
+      "key": "chila_stance_0",
+      "path": "assets/characters/chila/chila_stance_0.png",
+      "bytes": 147441,
+      "sha256": "d0dd07b72e2c9ca980cd030982682d677241518922ec92a555e39aabcde610e9"
+    },
+    {
+      "key": "chila_stance_1",
+      "path": "assets/characters/chila/chila_stance_1.png",
+      "bytes": 152162,
+      "sha256": "0e15f80b12859690aae684012cbdcb9bba22e73e3afa5a0b0d2558f9b1642678"
+    },
+    {
+      "key": "chila_stance_2",
+      "path": "assets/characters/chila/chila_stance_2.png",
+      "bytes": 154695,
+      "sha256": "c816c750e8e16166912af90847f4abfd2a8367005348a4b6fb2791ee108558c8"
+    },
+    {
+      "key": "chila_stance_3",
+      "path": "assets/characters/chila/chila_stance_3.png",
+      "bytes": 148883,
+      "sha256": "1f5791fd9c2a609dc69257b318b2cdb2af219f42326252c1bef01b4415993345"
+    },
+    {
+      "key": "chila_stance_4",
+      "path": "assets/characters/chila/chila_stance_4.png",
+      "bytes": 152683,
+      "sha256": "aff3b2658cfb4a5a94214b2f89cd40e30f14b0dde518b3bb707045b6c4e6a360"
+    },
+    {
+      "key": "chila_stance_5",
+      "path": "assets/characters/chila/chila_stance_5.png",
+      "bytes": 152178,
+      "sha256": "2dc030a4c8fef8861d8eb36c7aef61f681719c007d3a55e2e3e5fac6dd6ce805"
+    },
+    {
+      "key": "chila_stance_6",
+      "path": "assets/characters/chila/chila_stance_6.png",
+      "bytes": 149068,
+      "sha256": "5302eb2ce01806cf7c9b13feb6842d66bf0d8cb89ba3917e8d28d67c6b77fa84"
+    },
+    {
+      "key": "chila_stance_7",
+      "path": "assets/characters/chila/chila_stance_7.png",
+      "bytes": 150557,
+      "sha256": "33c660319633e6f36eda2dcabdeace7cb239d219bc11c60ba3338b0a83a83717"
+    },
+    {
+      "key": "chila_stance_8",
+      "path": "assets/characters/chila/chila_stance_8.png",
+      "bytes": 150634,
+      "sha256": "f8c7d495a88a973b064e646c898ad2e0c7b9216230bf3e2452cef79f0d44853d"
+    },
+    {
+      "key": "chila",
+      "path": "assets/characters/chila/chila.png",
+      "bytes": 329251,
+      "sha256": "f1d50a14fdec8f4d1a8e8fd4b8e5b5ab088771e11550759d84647f42bfeab9bf"
+    },
+    {
+      "key": "junin",
+      "path": "assets/characters/junin/junin.png",
+      "bytes": 365668,
+      "sha256": "3b1824db2d712d786adec8a09927f96682dd21c2dca54a5d709c90aa2e704fb2"
+    },
+    {
+      "key": "barNovo",
+      "path": "assets/stages/barNovo.png",
+      "bytes": 2475588,
+      "sha256": "994ddcead903d8bbd857d738ea0c4a5ad87d77e51d441cb37f6931c1b1c11f63"
+    }
+  ],
+  "duplicates": [],
+  "biggest_files": [
+    {
+      "path": "assets/stages/barNovo.png",
+      "bytes": 2475588
+    },
+    {
+      "path": "assets/characters/junin/junin.png",
+      "bytes": 365668
+    },
+    {
+      "path": "assets/characters/chila/chila.png",
+      "bytes": 329251
+    },
+    {
+      "path": "assets/characters/chila/chila_stance_2.png",
+      "bytes": 154695
+    },
+    {
+      "path": "assets/characters/chila/chila_stance_4.png",
+      "bytes": 152683
+    },
+    {
+      "path": "assets/characters/chila/chila_stance_5.png",
+      "bytes": 152178
+    },
+    {
+      "path": "assets/characters/chila/chila_stance_1.png",
+      "bytes": 152162
+    },
+    {
+      "path": "assets/characters/chila/chila_stance_9.png",
+      "bytes": 151058
+    },
+    {
+      "path": "assets/characters/chila/chila_stance_8.png",
+      "bytes": 150634
+    },
+    {
+      "path": "assets/characters/chila/chila_stance_7.png",
+      "bytes": 150557
+    },
+    {
+      "path": "assets/characters/chila/chila_stance_11.png",
+      "bytes": 149085
+    },
+    {
+      "path": "assets/characters/chila/chila_stance_6.png",
+      "bytes": 149068
+    },
+    {
+      "path": "assets/characters/chila/chila_stance_3.png",
+      "bytes": 148883
+    },
+    {
+      "path": "assets/characters/chila/chila_stance_0.png",
+      "bytes": 147441
+    },
+    {
+      "path": "assets/characters/chila/chila_stance_10.png",
+      "bytes": 147350
+    }
+  ]
+}
