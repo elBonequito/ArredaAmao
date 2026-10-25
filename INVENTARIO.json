@@ -1790,5 +1790,80 @@
     "ignored_asset": "pressione_enter.png",
     "new_scene": "js/scenes/TitleScene.js"
   },
-  "total_project_bytes_v52": 25682669
+  "total_project_bytes_v52": 25682669,
+  "julio_v53": {
+    "character_id": "julio-mente-pensante",
+    "sprite_source": "Eight-Frame Golden Warrior Sprite Sheet(1).png",
+    "new_assets": [
+      {
+        "key": "julio_idle_0",
+        "path": "assets/characters/julio/julio_idle_0.png",
+        "bytes": 129457,
+        "sha256": "117efea18d94ac8a19f0f7b267536a20a7bce11203eaaed2f25962eb1558d3c7"
+      },
+      {
+        "key": "julio_idle_1",
+        "path": "assets/characters/julio/julio_idle_1.png",
+        "bytes": 134758,
+        "sha256": "aea181a7c165678118ae1860bbedf1695cfadf5540be6fd451af22da6cd76ce9"
+      },
+      {
+        "key": "julio_idle_2",
+        "path": "assets/characters/julio/julio_idle_2.png",
+        "bytes": 136637,
+        "sha256": "fa9de5311ea19f0b450a558289bc19b56ded2989485b8a3199403b93b4784479"
+      },
+      {
+        "key": "julio_idle_3",
+        "path": "assets/characters/julio/julio_idle_3.png",
+        "bytes": 132044,
+        "sha256": "0586f2ba9917a6e27a6b07dd85f7bb4f54d1045f323fe288519ad1367d3cda4c"
+      },
+      {
+        "key": "julio_idle_4",
+        "path": "assets/characters/julio/julio_idle_4.png",
+        "bytes": 136078,
+        "sha256": "99299f9f06f0cfffa64bff3930955fcb2973176606b57cb9d75ff23344d2bb8d"
+      },
+      {
+        "key": "julio_idle_5",
+        "path": "assets/characters/julio/julio_idle_5.png",
+        "bytes": 135488,
+        "sha256": "1e117ea87edd1c727fffc779e0b2b75b5ee2302f702a99cb728136ff84c3181f"
+      },
+      {
+        "key": "julio_idle_6",
+        "path": "assets/characters/julio/julio_idle_6.png",
+        "bytes": 135668,
+        "sha256": "84f0acdf91130330b2ee944650ba9a6d12d8bc46936a2803dd39211dd7254490"
+      },
+      {
+        "key": "julio_idle_7",
+        "path": "assets/characters/julio/julio_idle_7.png",
+        "bytes": 130911,
+        "sha256": "cdad374af0cc2f866009389a1f20713671128d512783858e1f4f13fd38a2a9d2"
+      }
+    ],
+    "new_frame_count": 8,
+    "animation": "julio-idle",
+    "fps": 8,
+    "special_available": false,
+    "unchanged_existing_file_count": 300,
+    "changed_existing_files": [
+      "index.html",
+      "README.md",
+      "js/ui/menu.js",
+      "js/controllers/input.js",
+      "js/config/characters.js",
+      "js/combat/movement.js",
+      "js/combat/attacks.js",
+      "js/combat/specials.js",
+      "js/assets/manifest.js",
+      "js/scenes/FightScene.js",
+      "js/scenes/visual.js"
+    ],
+    "all_asset_manifest_count": 289,
+    "project_file_count": 322,
+    "project_size_bytes": 27003317
+  }
 }

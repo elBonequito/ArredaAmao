@@ -1,6 +1,7 @@
 import { FLOOR } from "../config/game.js";
 import { CHILA_PUNCH_HIT, CHILA_VISUAL, GAUCHO_SCALE } from "../characters/chila.js";
 import { JUNIN_DEFENSE, juninDefenseFrame } from "../characters/junin.js";
+import { JULIO_ID, JULIO_IDLE } from "../characters/julio.js";
 
 // Métodos originais da v5.0 agrupados por responsabilidade, sem alterar o corpo da lógica.
 export const visualMethods = {
@@ -217,6 +218,15 @@ export const visualMethods = {
       s.setTexture('junin_stance_0');
     }
   }
+  // Júlio: não há sprites extras ainda. Movimenta e luta pela mesma lógica
+  // geral (incluindo acertos e hit stun), exibindo SEMPRE o idle original.
+  // Escala e posição seguem a física, sem girar/esticar o desenho para simular golpes.
+  if(f.characterId===JULIO_ID){
+    if(!s.anims.isPlaying||s.anims.currentAnim?.key!==JULIO_IDLE.animation)
+      s.play(JULIO_IDLE.animation);
+    f.visualX=f.x;f.visualY=f.y;f.visualAngle=0;
+    f.visualScaleX=1;f.visualScaleY=1;
+  }
   s.setPosition(f.visualX,f.visualY);
   // Original sprite sheet faces right; mirror when Junin is facing left (towards Chila).
   s.setFlipX(f.dir===-1);
@@ -232,7 +242,9 @@ export const visualMethods = {
     s.texture.key.startsWith('chila_defense_')?'defense':
     s.texture.key.startsWith('chila_walk_')?'walk':
     s.texture.key.startsWith('chila_stance_')?'stance':null);
-  if(f.characterId==='junin' && s.texture.key.startsWith('junin_defense_')){
+  if(f.characterId===JULIO_ID){
+    s.setScale(JULIO_IDLE.scale); // uniforme durante todos os estados
+  }else if(f.characterId==='junin' && s.texture.key.startsWith('junin_defense_')){
     s.setScale(JUNIN_DEFENSE.scale); // X=Y: silhouette never stretches.
     s.setPosition(f.visualX,f.visualY+JUNIN_DEFENSE.offsetY);
   }else if(f.characterId==='chila'&&f.gauchoStage){
@@ -244,7 +256,7 @@ export const visualMethods = {
   }else{
   s.setDisplaySize((f.characterId==='junin'?(s.texture.key.startsWith('jetta_entry_')?295:(s.texture.key.startsWith('junin_crouch_')?270:(s.texture.key.startsWith('junin_jump_')?210:(s.texture.key.startsWith('junin_kick_')?312:(s.texture.key.startsWith('junin_punch_')?274:174))))):(isChilaCrouch?270:(isChilaDefense?230:(f.characterId==='chila'&&(s.texture.key.startsWith('chila_stance_')||s.texture.key.startsWith('chila_walk_'))?174:((s.texture.key.startsWith('chila_punch_')||s.texture.key.startsWith('chila_kick_'))?280:(s.texture.key.startsWith('chila_jump_')?228:153))))))*f.visualScaleX,(f.characterId==='junin'&&s.texture.key.startsWith('jetta_entry_')?252:(isChilaCrouch||(f.characterId==='junin'&&s.texture.key.startsWith('junin_crouch_'))?230:218))*f.visualScaleY);
   }
-  s.setAngle(f.visualAngle);
+  s.setAngle(f.characterId===JULIO_ID?0:f.visualAngle);
   s.setTint(recoil?0xff7777:(f.block&&f.characterId!=='chila'&&!s.texture.key.startsWith('junin_defense_'))?0x91caff:0xffffff);
  }
 };

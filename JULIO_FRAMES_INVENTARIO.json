@@ -1,0 +1,119 @@
+{
+  "source": "Eight-Frame Golden Warrior Sprite Sheet(1).png",
+  "original_size": [
+    2048,
+    682
+  ],
+  "canvas": [
+    320,
+    460
+  ],
+  "fps": 8,
+  "scale": 0.5,
+  "frames": [
+    {
+      "frame": 0,
+      "file": "assets/characters/julio/julio_idle_0.png",
+      "body_box": [
+        38,
+        57,
+        316,
+        449
+      ],
+      "visible_height": 393,
+      "visible_width": 279,
+      "pixels": 52374
+    },
+    {
+      "frame": 1,
+      "file": "assets/characters/julio/julio_idle_1.png",
+      "body_box": [
+        45,
+        62,
+        308,
+        451
+      ],
+      "visible_height": 390,
+      "visible_width": 264,
+      "pixels": 51358
+    },
+    {
+      "frame": 2,
+      "file": "assets/characters/julio/julio_idle_2.png",
+      "body_box": [
+        49,
+        53,
+        302,
+        451
+      ],
+      "visible_height": 399,
+      "visible_width": 254,
+      "pixels": 50967
+    },
+    {
+      "frame": 3,
+      "file": "assets/characters/julio/julio_idle_3.png",
+      "body_box": [
+        47,
+        58,
+        312,
+        451
+      ],
+      "visible_height": 394,
+      "visible_width": 266,
+      "pixels": 50134
+    },
+    {
+      "frame": 4,
+      "file": "assets/characters/julio/julio_idle_4.png",
+      "body_box": [
+        44,
+        53,
+        312,
+        451
+      ],
+      "visible_height": 399,
+      "visible_width": 269,
+      "pixels": 51502
+    },
+    {
+      "frame": 5,
+      "file": "assets/characters/julio/julio_idle_5.png",
+      "body_box": [
+        41,
+        60,
+        302,
+        451
+      ],
+      "visible_height": 392,
+      "visible_width": 262,
+      "pixels": 50095
+    },
+    {
+      "frame": 6,
+      "file": "assets/characters/julio/julio_idle_6.png",
+      "body_box": [
+        38,
+        57,
+        305,
+        451
+      ],
+      "visible_height": 395,
+      "visible_width": 268,
+      "pixels": 51304
+    },
+    {
+      "frame": 7,
+      "file": "assets/characters/julio/julio_idle_7.png",
+      "body_box": [
+        38,
+        57,
+        287,
+        451
+      ],
+      "visible_height": 395,
+      "visible_width": 250,
+      "pixels": 51428
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import { loadAssets } from "../assets/manifest.js";
 import { W, H, FLOOR } from "../config/game.js";
 import { CHARACTER_DATA } from "../config/characters.js";
+import { JULIO_ID, JULIO_IDLE } from "../characters/julio.js";
 import { EMPTY_COMMAND } from "../controllers/commands.js";
 import { menuMethods } from "../ui/menu.js";
 import { hudMethods } from "../ui/hud.js";
@@ -33,6 +34,11 @@ export class FightScene extends Phaser.Scene {
     this.add.text(480,270,"Não foi possível carregar todos os sprites. Confira os arquivos e a conexão HTTP.",{fontSize:"21px",color:"#ff8080",align:"center",wordWrap:{width:800}}).setOrigin(.5);
     return;
   }
+   // Júlio é um terceiro lutador completo no sistema de combate, mas até receber
+   // novos sprites apenas seu Fight Stance possui animação própria.
+   this.anims.create({key:JULIO_IDLE.animation,
+     frames:Array.from({length:JULIO_IDLE.frames},(_,i)=>({key:JULIO_IDLE.texturePrefix+i})),
+     frameRate:JULIO_IDLE.fps,repeat:-1});
    // Hit reaction exclusivo do Chila: 12 frames, uma execução a 15 FPS.
    this.anims.create({key:'chila-hit-reaction',
      frames:Array.from({length:12},(_,i)=>({key:'chila_hit_'+i})),
@@ -92,8 +98,9 @@ export class FightScene extends Phaser.Scene {
       chilaHitStart:0,chilaHitUntil:0,chilaHitAnimationStarted:false,
       command:EMPTY_COMMAND(),brain:null};
     f.g=this.add.graphics().setDepth(5);
-    f.sprite=this.add.sprite(x,FLOOR,char.preview)
-      .setOrigin(.5,1).setDisplaySize(characterId==='junin'?174:153,characterId==='junin'?218:215).setDepth(6);
+    f.sprite=this.add.sprite(x,FLOOR,char.preview).setOrigin(.5,1).setDepth(6);
+    if(characterId===JULIO_ID)f.sprite.setScale(JULIO_IDLE.scale); // proporcional
+    else f.sprite.setDisplaySize(characterId==='junin'?174:153,characterId==='junin'?218:215);
     if(controller==='cpu')f.brain={nextDecision:0,command:EMPTY_COMMAND(),seenAttack:null,observedAt:0,
       guardUntil:0,crouchUntil:0,guardDecision:false};
     return f;

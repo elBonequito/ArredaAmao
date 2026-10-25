@@ -62,9 +62,13 @@ export const movementMethods = {
         // Jump has priority; preserve its exact impulse and physics.
         f.juninCrouchStage=null;
         if(!f.juninJumpStage){f.juninJumpStage='prep';f.juninJumpStart=t;}
-      }else{
+      }else if(f.characterId==='chila'){
         f.chilaJumpStage='prep';f.chilaJumpStart=t;f.chilaJumpLandTime=0;
         f.inChilaJump=true;
+      }else{
+        // Júlio: mesmos -560 de impulso e +1400 de gravidade da arena;
+        // só o sprite idle está disponível, sem inventar frames de salto.
+        f.vy=-560;
       }
     }
     if(t>=f.nextAttack&&!f.block&&!f.jettaActive&&t>=this.actionLockUntil){

@@ -281,6 +281,14 @@ export const ASSET_MANIFEST = [
   ["chila_stance_8", "assets/characters/chila/chila_stance_8.png"],
   ["chila", "assets/characters/chila/chila.png"],
   ["junin", "assets/characters/junin/junin.png"],
+  ["julio_idle_0", "assets/characters/julio/julio_idle_0.png"],
+  ["julio_idle_1", "assets/characters/julio/julio_idle_1.png"],
+  ["julio_idle_2", "assets/characters/julio/julio_idle_2.png"],
+  ["julio_idle_3", "assets/characters/julio/julio_idle_3.png"],
+  ["julio_idle_4", "assets/characters/julio/julio_idle_4.png"],
+  ["julio_idle_5", "assets/characters/julio/julio_idle_5.png"],
+  ["julio_idle_6", "assets/characters/julio/julio_idle_6.png"],
+  ["julio_idle_7", "assets/characters/julio/julio_idle_7.png"],
   ["barNovo", "assets/stages/barNovo.png"],
 ];
 export function loadAssets(scene){

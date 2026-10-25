@@ -48,7 +48,7 @@ A versão **Phaser 3.90.0** continua vindo de `https://cdn.jsdelivr.net/npm/phas
 | Defender | H | O |
 | Especial | **Q** | **P** |
 
-Cada personagem tem **um especial**: Chila Careca → **Churrasco do Avô do Chila**, Junin Hipotético → **Jetta Hipotético**. CPU usa o comando interno do personagem, não tecla P.
+Os dois especiais existentes são preservados: Chila Careca → **Churrasco do Avô do Chila**, Junin Hipotético → **Jetta Hipotético**. **Júlio ainda não possui especial** porque nenhuma spritesheet desse golpe foi fornecida. A CPU usa comandos internos, não a tecla P.
 
 ## Publicar no GitHub Pages
 
@@ -193,3 +193,40 @@ de transições da `TitleScene` foram verificados automaticamente por simulaçã
 Quando Phaser via CDN não puder ser carregado no ambiente de testes, a animação
 real no navegador, responsividade móvel e partidas completas devem ser validadas
 manualmente antes da publicação pública.
+
+
+## v5.3 — Júlio Mente Pensante (novo lutador jogável)
+
+O elenco agora tem três personagens: **Chila Careca**, **Junin Hipotético** e
+**Júlio Mente Pensante** (`characterId: julio-mente-pensante`).
+A tela de seleção usa a lista `CHARACTER_ORDER` de `js/config/characters.js`:
+é possível escolher Júlio no **P1, P2 ou CPU**, inclusive Júlio contra Júlio.
+
+### Assets e animação
+- `assets/characters/julio/julio_idle_0.png` a `julio_idle_7.png`: os **8 frames**
+  recortados da spritesheet recebida, fundo originalmente transparente preservado;
+  nunca foram recriados ou substituídos por imagens de outros lutadores.
+- `js/characters/julio.js`: configuração da animação `julio-idle` (8 FPS,
+  repetição contínua) e escala proporcional de 0,50; pés alinhados ao piso.
+- `js/assets/manifest.js`: oito chaves novas para imagens externas.
+- `PREVIA_JULIO_FIGHT_STANCE.png`: contato visual com fundo quadriculado.
+
+### Movimentos provisórios
+Com as spritesheets adicionais ainda indisponíveis, Júlio permanece visualmente
+na animação original **Fight Stance** enquanto caminha, soca, chuta, salta,
+agacha ou defende, **sem girar, esticar ou reutilizar sprites alheios**.
+Todas essas ações usam os controles e o mesmo sistema lógico de física,
+dano, colisão, bloqueio, rounds e CPU. **O especial de Júlio NÃO existe**:
+Q/P não ativa nenhum especial para ele, e a CPU não tenta executá-lo.
+Os especiais do Chila e Junin permanecem inalterados.
+
+### Para adicionar animações futuras
+Acrescente novos PNGs em `assets/characters/julio/`, registre as chaves
+em `js/assets/manifest.js`, a animação em `FightScene.create()` e o estado visual
+em `js/scenes/visual.js`. Os nomes previstos são `julio-walk`, `julio-punch`,
+`julio-kick`, `julio-jump`, `julio-crouch`, `julio-block`, `julio-hit` e
+`julio-special`, mas **nenhum deles está carregado** até existirem arquivos.
+
+Para executar: `python -m http.server 8000` na pasta extraída, depois
+acesse `http://localhost:8000`. Para publicar, envie todo o conteúdo da pasta
+para o repositório do GitHub Pages; não tente subir só o `index.html`.

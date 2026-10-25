@@ -1,6 +1,7 @@
 import { W, H, FLOOR } from "../config/game.js";
 import { CHARACTER_DATA } from "../config/characters.js";
 import { CHILA_PUNCH_HIT } from "../characters/chila.js";
+import { JULIO_ID } from "../characters/julio.js";
 import { EMPTY_COMMAND } from "../controllers/commands.js";
 
 // Métodos originais da v5.0 agrupados por responsabilidade, sem alterar o corpo da lógica.
@@ -20,6 +21,13 @@ export const attacksMethods = {
    const progress=Phaser.Math.Clamp(1-(a.attackUntil-t)/duration,0,.99999);
    const spriteFrame=Math.floor(progress*12);
    if(spriteFrame<5||spriteFrame>7)return;
+ }
+ // Júlio usa temporariamente idle para soco/chute: uma janela curta do
+ // ataque normal, sem atingir instantaneamente ou manter hitbox o golpe inteiro.
+ if(a.characterId===JULIO_ID&&(a.attack.type==='punch'||a.attack.type==='kick')){
+   const duration=a.attack.type==='punch'?240:370;
+   const progress=Phaser.Math.Clamp(1-(a.attackUntil-t)/duration,0,.99999);
+   if(progress<.36||progress>.72)return;
  }
  // JUNIN PUNCH: connect only when the sprite fist is fully extended
  // (poses 05–09); never deal damage during preparation or recovery.

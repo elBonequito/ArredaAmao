@@ -1,9 +1,11 @@
 import { W, FLOOR } from "../config/game.js";
 import { GAUCHO_PHASES, GAUCHO_COOLDOWN } from "../characters/chila.js";
+import { CHARACTER_DATA } from "../config/characters.js";
 
 // Métodos originais da v5.0 agrupados por responsabilidade, sem alterar o corpo da lógica.
 export const specialsMethods = {
  activateCharacterSpecial(f,t){
+   if(!CHARACTER_DATA[f.characterId]?.special)return; // Júlio: nenhum especial inventado
    if(t<f.specialCooldown||f.gauchoStage||f.jettaActive)return;
    if(f.characterId==='chila'){
      this.startGaucho(f,t);

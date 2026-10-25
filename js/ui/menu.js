@@ -1,5 +1,6 @@
 import { W, H } from "../config/game.js";
-import { CHARACTER_DATA } from "../config/characters.js";
+import { CHARACTER_DATA, CHARACTER_ORDER } from "../config/characters.js";
+import { JULIO_ID } from "../characters/julio.js";
 import { CPU_DIFFICULTIES } from "../config/difficulties.js";
 
 // Métodos originais da v5.0 agrupados por responsabilidade, sem alterar o corpo da lógica.
@@ -24,10 +25,10 @@ export const menuMethods = {
    this.menuText(480,514,'↑ ↓ / ← →: NAVEGAR    •    ENTER / ESPAÇO: CONFIRMAR    •    ESC: VOLTAR',15,'#99929b');
  }
 ,
- menuButton(label,x,y,w,cb){
+ menuButton(label,x,y,w,cb,fontSize=22){
    const id=this.menuButtons.length;
    const back=this.menuObject(this.add.rectangle(x,y,w,53,0x1c1522,1).setStrokeStyle(2,0x75604a).setDepth(110).setInteractive({useHandCursor:true}));
-   const text=this.menuText(x,y,label,22,'#fff5d0');
+   const text=this.menuText(x,y,label,fontSize,'#fff5d0');
    const b={back,text,cb};this.menuButtons.push(b);
    back.on('pointerover',()=>this.highlightMenu(id));
    back.on('pointerdown',()=>{if(this.time.now>=this.menuLockedUntil){this.highlightMenu(id);this.confirmMenu();}});
@@ -74,7 +75,7 @@ export const menuMethods = {
    this.menuButton('MULTIPLAYER LOCAL',480,308,365,()=>{
       this.mode='local';this.selection={p1:null,p2:null};this.selectStep='p1';this.showCharacterSelect();
    });
-   this.menuText(480,398,'2 LUTADORES  •  UM TECLADO  •  NENHUM ONLINE',19,'#d1bc9d');
+   this.menuText(480,398,CHARACTER_ORDER.length+' LUTADORES  •  UM TECLADO  •  NENHUM ONLINE',19,'#d1bc9d');
  }
 ,
  showCharacterSelect(){
@@ -87,17 +88,24 @@ export const menuMethods = {
      else if(this.mode==='single')this.showDifficulty();
      else this.launchMatch();
    };
-   for(const [idx,id] of ['chila','junin'].entries()){
-     const x=302+idx*355;
+   const roster=CHARACTER_ORDER;
+   const cardWidth=Math.min(282,(W-45)/roster.length-17);
+   for(const [idx,id] of roster.entries()){
+     const x=W*(idx+.5)/roster.length;
      const char=CHARACTER_DATA[id];
-     const plate=this.menuObject(this.add.rectangle(x,292,282,260,0x201b27,.9).setStrokeStyle(2,0xb99142).setDepth(109).setInteractive({useHandCursor:true}));
-     const photo=this.menuObject(this.add.image(x,349,char.preview).setOrigin(.5,1).setDisplaySize(148,176).setDepth(110));
-     this.menuText(x,378,char.name,22,'#f5d36d');
-     this.menuButton(char.name,x,450,280,()=>pick(id));
+     const plate=this.menuObject(this.add.rectangle(x,292,cardWidth,260,0x201b27,.9).setStrokeStyle(2,0xb99142).setDepth(109).setInteractive({useHandCursor:true}));
+     const sprite=this.add.image(x,349,char.preview).setOrigin(.5,1).setDepth(110);
+     // Original-sized portraits for Chila/Junin; proportional-only fit for Júlio.
+     if(id===JULIO_ID){
+       const tex=this.textures.get(char.preview).getSourceImage();
+       sprite.setScale(Math.min(148/tex.width,176/tex.height));
+     }else sprite.setDisplaySize(148,176);
+     this.menuObject(sprite);
+     this.menuText(x,378,char.name,id===JULIO_ID?17:20,'#f5d36d');
+     this.menuButton(char.name,x,450,cardWidth-5,()=>pick(id),id===JULIO_ID?17:20);
      plate.on('pointerover',()=>this.highlightMenu(idx));
      plate.on('pointerdown',()=>{this.highlightMenu(idx);this.confirmMenu()});
-     // indicator remains visible even if identical characters were selected.
-     if(this.selection.p1===id)this.menuText(x-100,182,'P1 ✓',20,'#72e0ff');
+     if(this.selection.p1===id)this.menuText(x-cardWidth/2+41,182,'P1 ✓',18,'#72e0ff');
    }
    this.menuButton('← VOLTAR',106,120,176,()=>this.backMenu());
    this.menuText(480,493,'MESMO PERSONAGEM EM AMBOS OS LADOS? PODE!',17,'#bbb0bd');

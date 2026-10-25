@@ -1,5 +1,6 @@
 import { W, H, FLOOR } from "../config/game.js";
 import { CPU_DIFFICULTIES } from "../config/difficulties.js";
+import { CHARACTER_DATA } from "../config/characters.js";
 import { EMPTY_COMMAND } from "./commands.js";
 
 // Métodos originais da v5.0 agrupados por responsabilidade, sem alterar o corpo da lógica.
@@ -40,6 +41,7 @@ export const inputMethods = {
    const canAct=t>=f.stunUntil && t>=f.nextAttack && !f.jettaActive && !this.jetta;
    const fighting=f.y>=FLOOR-.5 && !f.juninJumpStage;
    const r=Math.random();
+   const hasSpecial=Boolean(CHARACTER_DATA[f.characterId]?.special);
    // Non-perfect delayed response: quick punches can land before the CPU reacts.
    if(reactable&&fighting&&dist<180&&r<cfg.defend){
      c.guard=true;brain.guardUntil=t+Phaser.Math.Between(180,340);
@@ -59,11 +61,11 @@ export const inputMethods = {
        const roll=Math.random();
        if(roll<cfg.attack && dist<156){
          c[Math.random()<.57?'punch':'kick']=true;c.left=false;c.right=false;
-       }else if(roll<cfg.attack+cfg.special && t>=f.specialCooldown && !this.jetta){
+       }else if(hasSpecial && roll<cfg.attack+cfg.special && t>=f.specialCooldown && !this.jetta){
          c.special=true;c.left=false;c.right=false;
        }else if(roll<cfg.attack+cfg.special+cfg.crouch){c.crouch=true;c.left=false;c.right=false;brain.crouchUntil=t+Phaser.Math.Between(460,820);}
        else if(roll<cfg.attack+cfg.special+cfg.crouch+cfg.jump){c.jump=true;}
-     }else if(canAct&&fighting&&dist>=155&&dist<=410&&Math.random()<cfg.special && t>=f.specialCooldown && !this.jetta){
+     }else if(canAct&&fighting&&dist>=155&&dist<=410&&hasSpecial&&Math.random()<cfg.special && t>=f.specialCooldown && !this.jetta){
        c.special=true;c.left=false;c.right=false;
      }else if(canAct&&fighting&&Math.random()<cfg.jump*.22){c.jump=true;}
    }
