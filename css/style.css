@@ -1,3 +1,6 @@
 *{box-sizing:border-box}body{margin:0;background:#09090f;color:#eee;font-family:Arial,Helvetica,sans-serif;display:flex;align-items:center;flex-direction:column;min-height:100vh}header{text-align:center;padding:18px 10px 10px}h1{font-size:clamp(24px,4vw,42px);margin:0;color:#f5d36d;text-shadow:3px 3px #8e2428;letter-spacing:2px}header p{margin:8px;color:#aaa}#game{width:min(100%,1000px);padding:0 10px}#game canvas{display:block;width:100%;height:auto;box-shadow:0 0 40px #000;border:2px solid #8c6b34}.controls{width:min(100%,1000px);display:flex;gap:12px;padding:15px 10px;flex-wrap:wrap}.controls>div{flex:1;min-width:250px;background:#171720;border:1px solid #37313b;border-radius:8px;padding:12px;line-height:1.7;font-size:14px}.controls b{color:#f5d36d}kbd{background:#34323a;padding:3px 6px;border-radius:4px;color:white}button{border:0;background:#e1b74f;color:#1b1010;padding:10px 20px;font-weight:bold;cursor:pointer;border-radius:6px}#error{padding:20px;color:#ff7a7a;text-align:center}
 #loading { width:min(100%,1000px);padding:6px 14px;text-align:center;min-height:24px;color:#f5d36d;font-size:13px; }
 #loading.error {color:#ff7777;}
+
+/* A vinheta aparece sozinha até carregar a tela inicial do jogo. */
+body.intro-active header,body.intro-active .controls,body.intro-active #loading{visibility:hidden}

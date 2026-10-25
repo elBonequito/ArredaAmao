@@ -100,3 +100,35 @@ O código foi extraído e seus módulos passaram por verificações de sintaxe, 
 - ZIP íntegro (`ZipFile.testzip()`).
 
 **Não testado no navegador com Phaser real:** animações, efeitos sonoros, colisões, acertos e transições visuais durante uma partida completa. A dependência CDN do Phaser não estava disponível para o navegador nesta execução. Execute uma partida manual completa antes de substituir o site público.
+
+
+## Vinheta inicial — Jogador do Equinócio (v5.1)
+
+A vinheta carrega **uma vez por carregamento da página**, antes de `FightScene`, usando
+`js/scenes/IntroScene.js`. Ela mostra o logo em preto com pixel art e inicia o menu ao
+terminar. **Enter, Espaço e clique/toque** pulam a apresentação, sem confirmar o menu
+seguinte. Revanche, saída da luta e retorno ao menu não reiniciam a apresentação.
+
+**Observação sobre a imagem recebida:** o PNG fornecido possuía apenas o logo completo
+(1254×1254 px). Não era a spritesheet 6×4 de 24 quadros descrita no pedido.
+Para entregar a abertura sem inventar detalhes gráficos, derivamos os 24 quadros
+*exclusivamente por revelação dos pixels do logo original*: lua (4 quadros), sol (8),
+símbolo (3), letras (7) e logo completo (2). As durações respeitam os intervalos
+solicitados, seguidas de 1 segundo de espera e 0,5 segundo de fade-out.
+A imagem original permanece intocada em `assets/ui/jogador_do_equinocio_logo_original.png`;
+a grade 6×4 (quadros 600×600, redimensionados com vizinho mais próximo para o atlas
+caber em GPUs comuns) está em `assets/ui/jogador_do_equinocio_intro_24.png`.
+Portanto a sequência é uma **revelação fiel baseada na arte original**, não a animação
+original de 24 desenhos independentes que ainda não foi fornecida.
+
+Arquivos novos:
+- `js/scenes/IntroScene.js` — cena, temporizações, skip e limpeza de eventos.
+- `assets/ui/jogador_do_equinocio_intro_24.png` — 24 quadros em grade 6×4.
+- `assets/ui/jogador_do_equinocio_logo_original.png` — cópia byte a byte da referência.
+- `assets/ui/jogador_do_equinocio_preview.png` — prévia 6×4.
+
+Arquivos ajustados: `js/main.js` (inicializa IntroScene primeiro),
+`js/scenes/FightScene.js` (proteção contra Enter/Espaço reaproveitados no menu) e
+`css/style.css` (oculta cabeçalho e comandos durante a vinheta).
+Se faltar o PNG da grade, a cena pula automaticamente para a tela original do jogo.
+Não foram alterados personagens, especial, controles de combate, CPU, menus ou golpes.

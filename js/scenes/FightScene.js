@@ -12,6 +12,7 @@ import { visualMethods } from "./visual.js";
 
 export class FightScene extends Phaser.Scene {
  constructor(){super('FightScene')}
+ init(data){this._introSkipped=!!data?.introSkipped;}
  preload(){
   this._assetErrors=[];
   const status=document.getElementById('loading');
@@ -74,7 +75,7 @@ export class FightScene extends Phaser.Scene {
     this.round=1;this.wins=[0,0];this.timer=75;this.state='menu';
     this.mode='local';this.difficulty='medio';this.selection={p1:null,p2:null};
     this.selectStep='p1';this.menuIndex=0;this.menuButtons=[];this.menuUI=[];
-    this.uiState='menu';this.menuLockedUntil=0;this.actionLockUntil=0;this.pendingTimers=[];
+    this.uiState='menu';this.menuLockedUntil=this.time.now+(this._introSkipped?650:0);this.actionLockUntil=0;this.pendingTimers=[];
     this.hud=null;this.announcement=null;
     this.input.keyboard.on('keydown',this.handleMenuKey,this);
     this.showMainMenu();
