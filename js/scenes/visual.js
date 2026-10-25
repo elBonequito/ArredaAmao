@@ -1,11 +1,22 @@
-import { FLOOR } from "../config/game.js";
+import { FLOOR, W, H } from "../config/game.js";
+import { UI_LAYOUT } from "../config/layout.js";
 import { CHILA_PUNCH_HIT, CHILA_VISUAL, GAUCHO_SCALE } from "../characters/chila.js";
 import { JUNIN_DEFENSE, juninDefenseFrame } from "../characters/junin.js";
 import { JULIO_ID, JULIO_IDLE } from "../characters/julio.js";
 
 // Métodos originais da v5.0 agrupados por responsabilidade, sem alterar o corpo da lógica.
 export const visualMethods = {
- drawStage(){this.add.image(480,270,'barNovo').setDisplaySize(960,540).setDepth(-10);this.add.rectangle(480,0,960,135,0x000000,.25).setDepth(-9);}
+ drawStage(){
+   // O cenário original é 1536x1024 (3:2), enquanto a tela é 16:9.
+   // Mantém a imagem SEM deformação e corta apenas as bordas verticais,
+   // com o piso visível e o letreiro central preservados.
+   const background=this.add.image(W/2,UI_LAYOUT.stage.topOffset,'barNovo')
+     .setOrigin(.5,0).setDepth(-10);
+   const texture=this.textures.get('barNovo').getSourceImage();
+   const backgroundScale=Math.max(W/texture.width,H/texture.height);
+   background.setScale(backgroundScale);
+   this.add.rectangle(W/2,0,W,UI_LAYOUT.stage.darkBandHeight,0x000000,.25).setDepth(-9);
+ }
 ,
  paintFighter(f,t,dt){
   const g=f.g;g.clear();

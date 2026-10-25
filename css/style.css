@@ -1,10 +1,50 @@
-*{box-sizing:border-box}body{margin:0;background:#09090f;color:#eee;font-family:Arial,Helvetica,sans-serif;display:flex;align-items:center;flex-direction:column;min-height:100vh}header{text-align:center;padding:18px 10px 10px}h1{font-size:clamp(24px,4vw,42px);margin:0;color:#f5d36d;text-shadow:3px 3px #8e2428;letter-spacing:2px}header p{margin:8px;color:#aaa}#game{width:min(100%,1000px);padding:0 10px}#game canvas{display:block;width:100%;height:auto;box-shadow:0 0 40px #000;border:2px solid #8c6b34}.controls{width:min(100%,1000px);display:flex;gap:12px;padding:15px 10px;flex-wrap:wrap}.controls>div{flex:1;min-width:250px;background:#171720;border:1px solid #37313b;border-radius:8px;padding:12px;line-height:1.7;font-size:14px}.controls b{color:#f5d36d}kbd{background:#34323a;padding:3px 6px;border-radius:4px;color:white}button{border:0;background:#e1b74f;color:#1b1010;padding:10px 20px;font-weight:bold;cursor:pointer;border-radius:6px}#error{padding:20px;color:#ff7a7a;text-align:center}
-#loading { width:min(100%,1000px);padding:6px 14px;text-align:center;min-height:24px;color:#f5d36d;font-size:13px; }
-#loading.error {color:#ff7777;}
-
-/* A vinheta aparece sozinha até carregar a tela inicial do jogo. */
-body.intro-active header,body.intro-active .controls,body.intro-active #loading{visibility:hidden}
-
-/* A tela de início também ocupa toda a arena, sem controles externos visíveis. */
-body.title-active{background:#000;justify-content:center}
-body.title-active header,body.title-active .controls,body.title-active #loading{display:none}
+/* Formato de apresentação fixo 16:9: resolução do canvas 1920x1080.
+ * FIT do Phaser controla width/height CSS do canvas. Não os sobrescrever.
+ * Barras pretas são produzidas pelo fundo do viewport, sem cortes.
+ */
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #000; }
+body { color: #fff; font-family: Arial, Helvetica, sans-serif; }
+#game {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #000;
+  touch-action: none;
+}
+#game canvas {
+  display: block;
+  flex: 0 0 auto;
+  /* Respeitar o dimensionamento FIT/autoCenter do Phaser. */
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  max-width: 100%;
+  max-height: 100%;
+}
+/* Informações antigas mantidas no DOM (inclusive atalhos), mas fora da
+ * apresentação aprovada: a tela lógica inteira pertence ao jogo. */
+header, .controls { position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap; }
+#loading, #error {
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(95vw, 820px);
+  pointer-events: none;
+  text-align: center;
+  font-size: clamp(12px, 1.4vw, 18px);
+  font-weight: 600;
+  text-shadow: 0 2px 4px #000;
+}
+#loading { top: 8px; color: #f5d36d; }
+#loading.error, #error { color: #ff7777; }
+#error { bottom: 7px; }
+#loading:empty, #error:empty { display: none; }
+body.intro-active #loading, body.title-active #loading { visibility: hidden; }

@@ -1,3 +1,4 @@
+import { configureSceneCamera } from "../config/layout.js";
 import { loadAssets } from "../assets/manifest.js";
 import { W, H, FLOOR } from "../config/game.js";
 import { CHARACTER_DATA } from "../config/characters.js";
@@ -30,6 +31,7 @@ export class FightScene extends Phaser.Scene {
   loadAssets(this);
  }
  create(){
+  configureSceneCamera(this);
   if(this._assetErrors && this._assetErrors.length){
     this.add.text(480,270,"Não foi possível carregar todos os sprites. Confira os arquivos e a conexão HTTP.",{fontSize:"21px",color:"#ff8080",align:"center",wordWrap:{width:800}}).setOrigin(.5);
     return;

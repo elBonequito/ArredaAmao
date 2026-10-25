@@ -1,3 +1,4 @@
+import { configureSceneCamera } from '../config/layout.js';
 import { W, H } from '../config/game.js';
 
 /**
@@ -52,6 +53,7 @@ export class TitleScene extends Phaser.Scene {
   }
 
   create() {
+    configureSceneCamera(this);
     this._ready = false;
     this._transitioning = false;
     this._finished = false;

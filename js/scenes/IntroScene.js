@@ -1,3 +1,4 @@
+import { configureSceneCamera } from '../config/layout.js';
 import { W, H } from '../config/game.js';
 
 /**
@@ -28,6 +29,7 @@ export class IntroScene extends Phaser.Scene {
     }
   }
   create(){
+    configureSceneCamera(this);
     this._done=false;
     this._skipped=false;
     this._timer=null;

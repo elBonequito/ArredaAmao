@@ -1,4 +1,4 @@
-# ARREDA A MÃO — Projeto organizado (base v5.0)
+# ARREDA A MÃO — Projeto modular (v5.4)
 
 Reorganização **sem recompressão de sprites e sem mudanças intencionais na jogabilidade**. O código foi distribuído por responsabilidade, mantendo **uma única cena Phaser (`FightScene`)** e seus métodos de combate. As funções foram movidas mantendo o mesmo corpo original; a ligação por `Object.assign` é uma etapa intermediária deliberada para evitar reescrever toda a cena.
 
@@ -230,3 +230,101 @@ em `js/scenes/visual.js`. Os nomes previstos são `julio-walk`, `julio-punch`,
 Para executar: `python -m http.server 8000` na pasta extraída, depois
 acesse `http://localhost:8000`. Para publicar, envie todo o conteúdo da pasta
 para o repositório do GitHub Pages; não tente subir só o `index.html`.
+
+
+## v5.4 — Padronização 1920 × 1080 (16:9)
+
+**Canvas lógico do Phaser: 1920 × 1080 em TODAS as cenas.**
+O cenário inicial mantém a composição da versão aprovada, incluindo os PNGs originais,
+as animações e o posicionamento das duas metades do título.
+
+### Estratégia: apresentação por câmera, sem alterar a simulação
+
+A v5.3 usa posições/colisões em uma área virtual de **960 × 540**, com chão
+em `y = 440`. Em vez de multiplicar centenas de posições e velocidades por
+2 (e correr o risco de alterar o combate), a v5.4 mantém **as mesmas unidades
+internas** e faz a única conversão espacial na câmera de cada cena:
+
+| Dimensão | Referência atual |
+|---|---|
+| Resolução lógica do canvas | 1920 × 1080 |
+| Mundo original das cenas / luta | 960 × 540 |
+| Zoom uniforme da câmera | 2 × |
+| Mundo visível na câmera | X: 0–960; Y: 0–540 |
+| Chão do combate | y = 440 no mundo (= 880 px no canvas) |
+| Posições iniciais (P1 e P2) | x = 270 / 690 no mundo |
+| Proporção da área de jogo | 16:9 |
+
+O Phaser converte automaticamente os cliques para as coordenadas de mundo
+por meio da câmera. **Não multiplicar por dois** posições físicas, gravidade,
+velocidade, hitboxes, alcance, projéteis, distâncias da CPU ou escalas individuais
+dos lutadores: isso produziria uma dupla ampliação. Todos os tempos de combate,
+vida, dano, hit stun e cooldowns foram mantidos.
+
+Arquivos da resolução e do enquadramento:
+- `js/config/game.js`: tamanho 1920×1080, dimensões do mundo e zoom único.
+- `js/config/layout.js`: câmera reutilizável e pontos de referência para menu, HUD e palco.
+- `js/main.js`: Phaser 3.90.0 em `FIT` / `CENTER_BOTH`, atualiza após tela cheia.
+- `js/scenes/IntroScene.js`, `TitleScene.js`, `FightScene.js`: a mesma configuração
+  de câmera aplicada ao entrar em cada cena.
+- `js/ui/menu.js` e `js/ui/hud.js`: pontos de ancoragem do layout centralizados.
+- `js/scenes/visual.js`: ajusta **somente** o enquadramento do fundo do Bar do Serjão.
+- `css/style.css`: tela cheia no navegador, sem scrollbar, com barras pretas
+  automáticas quando a janela não for 16:9; pixel art sem suavização.
+- `tests/verificar_layout.mjs` e `tests/verificar_menus.mjs`: verificações estruturais.
+
+### Limitação preexistente da arena
+
+A arte original do Bar do Serjão é **1536×1024 (3:2)**, portanto não cabe em 16:9
+sem recorte, barras laterais ou distorção. O protótipo anterior a **esticava**
+para 960×540. Nesta versão ela usa o mesmo fator de escala nos dois eixos,
+preenchendo a largura, com enquadramento vertical `topOffset = -30` no mundo.
+São cortados aproximadamente 48 pixels na parte superior e 112 na inferior
+*da imagem original*, mantendo o letreiro e a zona central do piso.
+Os pixels e arquivos originais não foram alterados; não há estiramento dos lutadores.
+
+A vinheta e o cenário da rua são 16:9 na apresentação. O canvas fixo
+1920×1080 é adaptado pelo Phaser a tamanhos de janela diferentes; telas em
+retrato ficam com barras pretas significativas. Para jogar em celular, o modo
+paisagem melhora a legibilidade; o jogo continua com controles de teclado para
+a luta, pois não foram acrescentados controles de toque nesta tarefa.
+
+### Verificações executadas na v5.4
+
+- `node --check` em todos os módulos JavaScript.
+- `node tests/verificar_layout.mjs`: **915 testes** de geometria, zoom,
+  inversão de coordenadas para cliques, FIT 16:9, assets e constantes do mundo.
+- `node tests/verificar_menus.mjs`: **198 testes simulados** de modo local,
+  Single Player, seleções de três lutadores (inclusive iguais), dificuldade,
+  resultado e revanche.
+- CSS de tela cheia conferido com Chromium headless em 1920×1080, 1366×768,
+  1024×768, 390×844 e 844×390: sem barras de rolagem, sem deformação e com
+  canvas centralizado. Este é um teste de responsividade com canvas de simulação,
+  **não** uma execução de Phaser.
+- Hashes de arquivos comparados com o ZIP original v5.3: os assets e os
+  módulos de mecânica/comandos/CPU permanecem exatamente os mesmos.
+- A integridade ZIP é verificada ao gerar o pacote.
+
+**Ainda não testado com o Phaser real no Chromium neste ambiente:** animações
+em tempo real, áreas clicáveis no renderizador, colisões e efeitos em uma partida
+completa. A CDN Phaser 3.90.0 não pôde ser alcançada. Validar manualmente nos
+navegadores de destino antes de publicar. Isso também vale para os efeitos de
+shake e as transições da abertura.
+
+### Como testar esta versão
+
+Na raiz descompactada do projeto:
+
+```bash
+python -m http.server 8000
+```
+
+Abra `http://localhost:8000/` e confira intro → capa → menu → seleção →
+combate. Teste Chila, Junin e Júlio em ambos os slots e como CPU; especial
+**Churrasco Q/P**, especial **Jetta Q/P**, rounds, revanche e retorno ao menu.
+Redimensione a janela e use F11 (tela cheia do navegador) para conferir as
+barras pretas. Se tiver Node.js instalado, rode os dois comandos de teste acima.
+
+No GitHub Pages, envie **todas as pastas** para a raiz do repositório. Não
+publique apenas o HTML: as imagens seguem como PNGs externos e os caminhos são
+relativos. Os arquivos de arte originais foram preservados.
