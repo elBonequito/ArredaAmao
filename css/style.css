@@ -4,3 +4,7 @@
 
 /* A vinheta aparece sozinha até carregar a tela inicial do jogo. */
 body.intro-active header,body.intro-active .controls,body.intro-active #loading{visibility:hidden}
+
+/* A tela de início também ocupa toda a arena, sem controles externos visíveis. */
+body.title-active{background:#000;justify-content:center}
+body.title-active header,body.title-active .controls,body.title-active #loading{display:none}

@@ -132,3 +132,64 @@ Arquivos ajustados: `js/main.js` (inicializa IntroScene primeiro),
 `css/style.css` (oculta cabeçalho e comandos durante a vinheta).
 Se faltar o PNG da grade, a cena pula automaticamente para a tela original do jogo.
 Não foram alterados personagens, especial, controles de combate, CPU, menus ou golpes.
+
+
+## Nova tela inicial arcade (v5.2)
+
+O fluxo desta versão é **IntroScene (vinheta do Jogador do Equinócio) → TitleScene
+(título com animação) → FightScene (menu principal já existente)**. A tela de título
+é exibida **uma única vez ao carregar a página**, não quando o jogador retorna ao
+menu ao terminar uma luta.
+
+**Novos arquivos:**
+
+- `js/scenes/TitleScene.js` — cena da capa: cenário, quedas sequenciais dos logos,
+  tremida de impacto, pergunta piscando, entradas de teclado/clique/toque,
+  bloqueio contra avanço duplicado e liberação dos listeners/timers ao sair.
+- `assets/ui/fundo_menu.png` — cenário noturno 1920×1080, exibido em 16:9.
+- `assets/ui/logo_arreda.png` e `assets/ui/logo_a_mao.png` — logos originais
+  sem alterações; escala uniforme de 0,48 na resolução lógica 960×540.
+- `assets/ui/tem_coragem.png` — pergunta original, exibida após a queda do título.
+- `assets/ui/toque_para_comecar.png` — instrução gráfica somente para telas de toque.
+
+O arquivo `pressione_enter.png` **não foi copiado nem utilizado**. Para teclado,
+`APERTE QUALQUER TECLA` é renderizado pelo Phaser com uma fonte monoespaçada
+estilo arcade, texto prateado e contorno escuro.
+
+A sequência dura **500 ms** (entrada do fundo) + **600 ms** (queda de ARREDA) +
+**400 ms** (queda de A MÃO), seguidos de uma breve tremida. Após a chegada do
+logo, a pergunta alterna a visibilidade a cada **700 ms** e a tela aguarda uma
+nova tecla, clique ou toque; não passa automaticamente ao menu.
+O comando de início faz um fade para preto de **300 ms**. Combinações com
+Ctrl/Alt/Meta, teclas modificadoras isoladas, Tab, teclas de função e repetições
+automáticas por tecla mantida são ignoradas. A próxima cena bloqueia confirmações
+por **650 ms** para não escolher opções do menu com o mesmo comando.
+
+**Arquivos existentes com mudanças limitadas:**
+`js/main.js` (registra `TitleScene`), `js/scenes/IntroScene.js` (segue para
+`TitleScene` em vez de `FightScene`), `css/style.css` (esconde cabeçalho e
+controles externos enquanto a capa aparece) e `index.html` (título da aba).
+Nenhuma lógica de personagens, especiais, HUD, IA, física ou rounds foi alterada.
+
+### Como testar a abertura
+
+1. Use `python -m http.server 8000` na raiz do projeto e abra `http://localhost:8000`.
+   É preciso conexão à internet para carregar Phaser 3.90.0 via CDN.
+2. Confirme a vinheta da produtora, depois a rua ao anoitecer, as duas quedas
+   do logo e a pergunta piscante. Aguardar não pode abrir o menu automaticamente.
+3. Recarregue a página, pule a vinheta segurando Enter ou Espaço e confirme
+   que isso não pula também a capa. Solte a tecla e aperte outra vez **depois
+   que o título terminar de cair** para abrir o menu de modos.
+4. Teste clique e toque, assim como um navegador móvel (mostra o PNG
+   `TOQUE PARA COMEÇAR` em vez do texto de teclado).
+5. Confirme a seleção de personagens, Single Player, Multiplayer Local,
+   golpes normais, especiais **Q/P**, rounds e revanche. Volte ao menu da luta:
+   não deve reaparecer nem a vinheta nem a nova tela de início.
+
+### Limitação de testes
+
+A sintaxe dos módulos, o inventário de arquivos, os caminhos HTTP e o fluxo
+de transições da `TitleScene` foram verificados automaticamente por simulação.
+Quando Phaser via CDN não puder ser carregado no ambiente de testes, a animação
+real no navegador, responsividade móvel e partidas completas devem ser validadas
+manualmente antes da publicação pública.

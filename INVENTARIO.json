@@ -1757,5 +1757,38 @@
       "path": "assets/characters/chila/chila_stance_10.png",
       "bytes": 147350
     }
-  ]
+  ],
+  "title_screen_v52": {
+    "new_assets": [
+      {
+        "path": "assets/ui/fundo_menu.png",
+        "bytes": 2617539,
+        "sha256": "cc14323c08b08c9c9552d2b2aceaa9376f8624e2248ced922c4c14ccef50900c"
+      },
+      {
+        "path": "assets/ui/logo_arreda.png",
+        "bytes": 286961,
+        "sha256": "0b26d934b5745211d899165400c3ecdee97a6dc9aa209e21953d9e4909fa64c6"
+      },
+      {
+        "path": "assets/ui/logo_a_mao.png",
+        "bytes": 482526,
+        "sha256": "40b51e6c71f1dfd44eec3c4fff033300f4ec2d319bd8f7c55c816b300f5aa7c3"
+      },
+      {
+        "path": "assets/ui/tem_coragem.png",
+        "bytes": 361368,
+        "sha256": "c448cde1a8090161a7fdde7444f7931ec2d6c21f729a93088c14c0a5a6fce6c0"
+      },
+      {
+        "path": "assets/ui/toque_para_comecar.png",
+        "bytes": 306919,
+        "sha256": "df19771fbf57d32668f63f2e962eea24e5d2b8218e24dddb597a2a0ad4c78684"
+      }
+    ],
+    "assets_copied_without_recompression": true,
+    "ignored_asset": "pressione_enter.png",
+    "new_scene": "js/scenes/TitleScene.js"
+  },
+  "total_project_bytes_v52": 25682669
 }

@@ -85,8 +85,10 @@ export class IntroScene extends Phaser.Scene {
   finish(){
     if(this._done)return;
     this._done=true;
+    // Evita exibir cabeçalho/controles enquanto a nova tela inicial carrega.
+    document.body.classList.add('title-active');
     this.cleanup();
-    this.scene.start('FightScene',{introSkipped:this._skipped});
+    this.scene.start('TitleScene',{introSkipped:this._skipped});
   }
   cleanup(){
     this._timer?.remove(false);
