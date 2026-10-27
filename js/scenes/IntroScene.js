@@ -16,18 +16,8 @@ const FRAME_DELAYS=Array.from({length:24},(_,i)=>
 
 export class IntroScene extends Phaser.Scene {
   constructor(){super({key:'IntroScene'});}
-  preload(){
-    this.load.spritesheet(INTRO_KEY,INTRO_URL,{
-      frameWidth:FRAME_SIDE,frameHeight:FRAME_SIDE,endFrame:23
-    });
-    this.load.on('loaderror',this.onAssetError,this);
-    this.load.on('fileloaderror',this.onAssetError,this);
-  }
-  onAssetError(file){
-    if(file?.key===INTRO_KEY){
-      console.warn('A vinheta do Equinócio não carregou. Abrindo o menu principal.');
-    }
-  }
+  // BootScene já carregou a spritesheet opcional. Não baixar novamente.
+  preload() {}
   create(){
     configureSceneCamera(this);
     this._done=false;

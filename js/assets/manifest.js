@@ -304,5 +304,8 @@ export const ASSET_MANIFEST = [
   ["barNovo", "assets/stages/barNovo.png"],
 ];
 export function loadAssets(scene){
- for(const [key,url] of ASSET_MANIFEST)scene.load.image(key,url);
+ for(const [key,url] of ASSET_MANIFEST){
+  // Reaproveita a texture cache em caso de retry; não baixa arquivos já carregados.
+  if(!scene.textures.exists(key)) scene.load.image(key,url);
+ }
 }

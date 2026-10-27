@@ -364,3 +364,33 @@ Junin continuam com o comportamento original.
 A sintaxe e os caminhos dos assets podem ser checados automaticamente, mas
 **a partida com Phaser real e a fluidez da transição precisam de avaliação
 visual no navegador**.
+
+
+## v5.6 — Tela personalizada de carregamento
+
+O fluxo inicial é **BootScene → IntroScene → TitleScene → FightScene (menu)**.
+A BootScene faz o carregamento inicial das 301 texturas do manifesto e dos cinco PNGs
+da tela inicial. A spritesheet da produtora é opcional: se falhar, a abertura
+é ignorada, mas o jogo continua. O menu de título e a arena só abrem após a
+validação de todos os arquivos necessários.
+
+O overlay `#loading` é HTML/CSS puro e aparece mesmo antes da CDN Phaser carregar.
+O visual opcional usa três miniaturas em `assets/ui/loading_*_leve.png`, derivadas
+dos PNGs originais, mantendo os PNGs originais do menu intocados. Nenhuma
+imagem do combate foi redimensionada ou recomprimida.
+
+**Porcentagem:** indica a fração dos arquivos obrigatórios carregados com sucesso
+no cache de texturas (não é a quantidade de bytes transferidos). Ela só chega a
+100% depois da validação das texturas na BootScene.
+
+**Falha:** quando um arquivo obrigatório falhar, a tela mostra "NÃO FOI POSSÍVEL
+CARREGAR O JOGO." e "TENTAR NOVAMENTE". O botão reinicia a BootScene e
+reutiliza as texturas já carregadas, sem forçar um novo download de tudo.
+A CDN Phaser é uma dependência de rede preexistente; em caso de falha de
+inicialização, o botão recarrega a página para tentar obtê-la novamente.
+
+**Teste local:** na raiz do projeto execute `python -m http.server 8000` e abra
+`http://localhost:8000/`. Para GitHub Pages, publique todas as pastas juntas.
+Não abra o `index.html` diretamente via `file://`.
+
+**Teste simulado da tela de carregamento:** `node tests/verificar_carregamento.mjs` (Node.js 18+).

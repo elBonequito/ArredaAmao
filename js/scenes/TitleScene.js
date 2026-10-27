@@ -40,16 +40,9 @@ export class TitleScene extends Phaser.Scene {
   constructor() { super({ key: 'TitleScene' }); }
 
   preload() {
-    this._loadFailed = false;
     document.body.classList.add('title-active');
-    this._onLoadError = file => {
-      if (TITLE_ASSETS.some(([key]) => key === file?.key)) {
-        this._loadFailed = true;
-        console.error('[Arreda a Mão] Asset da tela inicial não carregou:', file?.src || file?.key);
-      }
-    };
-    this.load.on('loaderror', this._onLoadError, this);
-    for (const [key, url] of TITLE_ASSETS) this.load.image(key, url);
+    // As cinco texturas são obrigatórias e já foram validadas no BootScene.
+    this._loadFailed = false;
   }
 
   create() {

@@ -1,2 +1,45 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Arreda a Mão — Edição Arcade</title><script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script><link rel="stylesheet" href="./css/style.css"></head><body><header><h1>ARREDA A MÃO</h1><p>BAR DO SERJÃO • EDIÇÃO ARCADE 1.5 • BAR DO SERJÃO</p></header><div id="game"></div><div id="loading" role="status" aria-live="polite">Carregando o jogo...</div><div class="controls"><div><b>P1 • TECLADO 1 (QUALQUER PERSONAGEM)</b><br><kbd>A</kbd>/<kbd>D</kbd> mover · <kbd>W</kbd> pular · <kbd>S</kbd> agachar<br><kbd>F</kbd> soco · <kbd>G</kbd> chute · <kbd>H</kbd> defender · <kbd>Q</kbd> especial (Chila: Churrasco do Avô do Chila; Junin: Jetta Hipotético; Júlio: indisponível)</div><div><b>P2 • TECLADO 2 (MULTIPLAYER LOCAL)</b><br><kbd>←</kbd>/<kbd>→</kbd> mover · <kbd>↑</kbd> pular · <kbd>↓</kbd> agachar<br><kbd>K</kbd> soco · <kbd>L</kbd> chute · <kbd>O</kbd> defender · <kbd>P</kbd> especial (Chila: Churrasco do Avô do Chila; Junin: Jetta Hipotético; Júlio: indisponível)</div></div><div id="error"></div><script type="module" src="./js/main.js"></script></body></html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Arreda a Mão — Edição Arcade</title>
+  <!-- CSS crítico: o feedback aparece antes de Phaser, dos módulos e dos sprites. -->
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000;color:white}
+    #loading{position:fixed;inset:0;z-index:100;display:flex;justify-content:center;align-items:center;background:#000;color:#fff;font-family:Consolas,'Courier New',monospace}
+    #loading .loading__frame{position:relative;aspect-ratio:16/9;width:min(100vw,177.7778dvh);max-height:100dvh;overflow:hidden;background:#090b17}
+    #loading .loading__center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:82%;text-align:center}
+  </style>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js" defer></script>
+</head>
+<body>
+  <header><h1>ARREDA A MÃO</h1><p>BAR DO SERJÃO • EDIÇÃO ARCADE</p></header>
+  <div id="game"></div>
+  <section id="loading" class="loading-screen" role="status" aria-live="polite" aria-label="Carregando o jogo">
+    <div class="loading__frame">
+      <!-- Imagens decorativas opcionais, mais leves que as do menu. -->
+      <img class="loading__background" src="./assets/ui/loading_fundo_leve.png" alt="" aria-hidden="true" onerror="this.hidden=true">
+      <div class="loading__shade"></div>
+      <div class="loading__logos" aria-hidden="true">
+        <img src="./assets/ui/loading_arreda_leve.png" alt="" onerror="this.hidden=true">
+        <img src="./assets/ui/loading_a_mao_leve.png" alt="" onerror="this.hidden=true">
+      </div>
+      <div class="loading__center">
+        <h2 id="loading-title">PREPARANDO A TRETA...</h2>
+        <div class="loading__meter" id="loading-meter" role="progressbar" aria-label="Arquivos do jogo carregados" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div id="loading-fill" class="loading__fill"></div>
+        </div>
+        <div id="loading-percent" class="loading__percent">0%</div>
+        <p id="loading-detail" class="loading__detail">Carregando os arquivos do jogo...</p>
+        <button id="loading-retry" class="loading__retry" type="button" hidden>TENTAR NOVAMENTE</button>
+      </div>
+      <p id="loading-phrase" class="loading__phrase">O churrasco já tá aceso.</p>
+    </div>
+  </section>
+  <div class="controls"><div>P1: A/D mover, W pular, S agachar, F soco, G chute, H defender, Q especial.</div><div>P2: Setas mover, K soco, L chute, O defender, P especial.</div></div>
+  <div id="error" role="alert"></div>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

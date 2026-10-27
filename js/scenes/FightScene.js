@@ -1,5 +1,5 @@
 import { configureSceneCamera } from "../config/layout.js";
-import { loadAssets } from "../assets/manifest.js";
+import { ASSET_MANIFEST } from "../assets/manifest.js";
 import { W, H, FLOOR } from "../config/game.js";
 import { CHARACTER_DATA } from "../config/characters.js";
 import { JULIO_ID, JULIO_IDLE, JULIO_FLOAT } from "../characters/julio.js";
@@ -16,19 +16,8 @@ export class FightScene extends Phaser.Scene {
  constructor(){super('FightScene')}
  init(data){this._introSkipped=!!data?.introSkipped;}
  preload(){
-  this._assetErrors=[];
-  const status=document.getElementById('loading');
-  this.load.on('progress',progress=>{if(status)status.textContent=`Carregando sprites: ${Math.round(progress*100)}%`;});
-  this.load.on('fileloaderror',file=>{
-    this._assetErrors.push(file.key);
-    const text=`Falha ao carregar: ${file.src || file.key}. Verifique os caminhos e use um servidor HTTP.`;
-    if(status){status.textContent=text;status.classList.add('error');}
-    document.getElementById('error').textContent=text;
-  });
-  this.load.once('complete',()=>{
-    if(status&&!this._assetErrors.length){status.textContent='';status.style.display='none';}
-  });
-  loadAssets(this);
+  // Os assets são pré-carregados na BootScene; a FightScene não repete downloads.
+  this._assetErrors=ASSET_MANIFEST.filter(([key])=>!this.textures.exists(key)).map(([key])=>key);
  }
  create(){
   configureSceneCamera(this);
