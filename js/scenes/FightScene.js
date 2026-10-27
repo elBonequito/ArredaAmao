@@ -2,7 +2,7 @@ import { configureSceneCamera } from "../config/layout.js";
 import { loadAssets } from "../assets/manifest.js";
 import { W, H, FLOOR } from "../config/game.js";
 import { CHARACTER_DATA } from "../config/characters.js";
-import { JULIO_ID, JULIO_IDLE } from "../characters/julio.js";
+import { JULIO_ID, JULIO_IDLE, JULIO_FLOAT } from "../characters/julio.js";
 import { EMPTY_COMMAND } from "../controllers/commands.js";
 import { menuMethods } from "../ui/menu.js";
 import { hudMethods } from "../ui/hud.js";
@@ -41,6 +41,13 @@ export class FightScene extends Phaser.Scene {
    this.anims.create({key:JULIO_IDLE.animation,
      frames:Array.from({length:JULIO_IDLE.frames},(_,i)=>({key:JULIO_IDLE.texturePrefix+i})),
      frameRate:JULIO_IDLE.fps,repeat:-1});
+   // Somente as seis poses finais são repetidas: a entrada na levitação não reinicia.
+   this.anims.create({key:JULIO_FLOAT.start,
+     frames:Array.from({length:JULIO_FLOAT.startFrames},(_,i)=>({key:JULIO_FLOAT.texturePrefix+i})),
+     frameRate:JULIO_FLOAT.fps,repeat:0});
+   this.anims.create({key:JULIO_FLOAT.walk,
+     frames:Array.from({length:JULIO_FLOAT.frames-JULIO_FLOAT.startFrames},(_,i)=>({key:JULIO_FLOAT.texturePrefix+(JULIO_FLOAT.startFrames+i)})),
+     frameRate:JULIO_FLOAT.fps,repeat:-1});
    // Hit reaction exclusivo do Chila: 12 frames, uma execução a 15 FPS.
    this.anims.create({key:'chila-hit-reaction',
      frames:Array.from({length:12},(_,i)=>({key:'chila_hit_'+i})),
@@ -98,6 +105,7 @@ export class FightScene extends Phaser.Scene {
       guard:0,animClock:0,visualX:x,visualY:FLOOR,visualAngle:0,visualScaleX:1,visualScaleY:1,
       previousX:x,landSquash:0,moveUntil:0,moveSpeed:0,specialCooldown:0,
       chilaHitStart:0,chilaHitUntil:0,chilaHitAnimationStarted:false,
+      julioFloatMoving:false,julioFloatStartedAt:0,
       command:EMPTY_COMMAND(),brain:null};
     f.g=this.add.graphics().setDepth(5);
     f.sprite=this.add.sprite(x,FLOOR,char.preview).setOrigin(.5,1).setDepth(6);

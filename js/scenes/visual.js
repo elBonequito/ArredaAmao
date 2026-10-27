@@ -2,7 +2,7 @@ import { FLOOR, W, H } from "../config/game.js";
 import { UI_LAYOUT } from "../config/layout.js";
 import { CHILA_PUNCH_HIT, CHILA_VISUAL, GAUCHO_SCALE } from "../characters/chila.js";
 import { JUNIN_DEFENSE, juninDefenseFrame } from "../characters/junin.js";
-import { JULIO_ID, JULIO_IDLE } from "../characters/julio.js";
+import { JULIO_ID, JULIO_IDLE, JULIO_FLOAT } from "../characters/julio.js";
 
 // Métodos originais da v5.0 agrupados por responsabilidade, sem alterar o corpo da lógica.
 export const visualMethods = {
@@ -229,12 +229,26 @@ export const visualMethods = {
       s.setTexture('junin_stance_0');
     }
   }
-  // Júlio: não há sprites extras ainda. Movimenta e luta pela mesma lógica
-  // geral (incluindo acertos e hit stun), exibindo SEMPRE o idle original.
-  // Escala e posição seguem a física, sem girar/esticar o desenho para simular golpes.
+  // Júlio: caminhada visual por levitação. A posição real (f.x/f.y),
+  // colisões e física continuam intocadas. Ataques, dano, pulo, defesa,
+  // agachamento e estados de fim de round sempre têm prioridade.
   if(f.characterId===JULIO_ID){
-    if(!s.anims.isPlaying||s.anims.currentAnim?.key!==JULIO_IDLE.animation)
-      s.play(JULIO_IDLE.animation);
+    const canFloat=this.state==='fight' && f.hp>0 && walking &&
+      !active && !recoil && grounded && !f.block && !f.crouch;
+    if(canFloat){
+      if(!f.julioFloatMoving){
+        f.julioFloatMoving=true;
+        f.julioFloatStartedAt=t;
+        s.play(JULIO_FLOAT.start); // tocada uma vez por início de deslocamento
+      }else if(t-f.julioFloatStartedAt>=JULIO_FLOAT.startFrames*JULIO_FLOAT.frameDurationMs){
+        if(s.anims.currentAnim?.key!==JULIO_FLOAT.walk || !s.anims.isPlaying)
+          s.play(JULIO_FLOAT.walk); // loop somente com frames 7-12
+      }
+    }else{
+      f.julioFloatMoving=false; // soltar movimento reinicia a próxima entrada
+      if(!s.anims.isPlaying||s.anims.currentAnim?.key!==JULIO_IDLE.animation)
+        s.play(JULIO_IDLE.animation); // demais ações continuam provisórias
+    }
     f.visualX=f.x;f.visualY=f.y;f.visualAngle=0;
     f.visualScaleX=1;f.visualScaleY=1;
   }
@@ -254,7 +268,7 @@ export const visualMethods = {
     s.texture.key.startsWith('chila_walk_')?'walk':
     s.texture.key.startsWith('chila_stance_')?'stance':null);
   if(f.characterId===JULIO_ID){
-    s.setScale(JULIO_IDLE.scale); // uniforme durante todos os estados
+    s.setScale(JULIO_IDLE.scale); // idle e levitação, sem stretch
   }else if(f.characterId==='junin' && s.texture.key.startsWith('junin_defense_')){
     s.setScale(JUNIN_DEFENSE.scale); // X=Y: silhouette never stretches.
     s.setPosition(f.visualX,f.visualY+JUNIN_DEFENSE.offsetY);

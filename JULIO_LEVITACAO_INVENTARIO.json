@@ -1,0 +1,282 @@
+{
+  "source": "Telekinetic Monk Sprite Sheet(1).png",
+  "source_resolution": [
+    1774,
+    887
+  ],
+  "original_alpha": true,
+  "frames": [
+    {
+      "frame": 1,
+      "bbox_original": [
+        30,
+        31,
+        263,
+        419
+      ],
+      "pixel_offset": [
+        58,
+        31
+      ],
+      "visible_bbox": [
+        58,
+        31,
+        321,
+        450
+      ],
+      "bottom_margin": 10,
+      "pixels_with_alpha": 56721
+    },
+    {
+      "frame": 2,
+      "bbox_original": [
+        317,
+        38,
+        270,
+        414
+      ],
+      "pixel_offset": [
+        50,
+        38
+      ],
+      "visible_bbox": [
+        50,
+        38,
+        320,
+        452
+      ],
+      "bottom_margin": 8,
+      "pixels_with_alpha": 57691
+    },
+    {
+      "frame": 3,
+      "bbox_original": [
+        600,
+        34,
+        272,
+        416
+      ],
+      "pixel_offset": [
+        37,
+        34
+      ],
+      "visible_bbox": [
+        37,
+        34,
+        309,
+        450
+      ],
+      "bottom_margin": 10,
+      "pixels_with_alpha": 58345
+    },
+    {
+      "frame": 4,
+      "bbox_original": [
+        898,
+        32,
+        268,
+        408
+      ],
+      "pixel_offset": [
+        39,
+        32
+      ],
+      "visible_bbox": [
+        39,
+        32,
+        307,
+        440
+      ],
+      "bottom_margin": 20,
+      "pixels_with_alpha": 56687
+    },
+    {
+      "frame": 5,
+      "bbox_original": [
+        1186,
+        47,
+        269,
+        407
+      ],
+      "pixel_offset": [
+        32,
+        47
+      ],
+      "visible_bbox": [
+        32,
+        47,
+        301,
+        454
+      ],
+      "bottom_margin": 6,
+      "pixels_with_alpha": 57021
+    },
+    {
+      "frame": 6,
+      "bbox_original": [
+        1493,
+        42,
+        265,
+        408
+      ],
+      "pixel_offset": [
+        43,
+        42
+      ],
+      "visible_bbox": [
+        43,
+        42,
+        308,
+        450
+      ],
+      "bottom_margin": 10,
+      "pixels_with_alpha": 55578
+    },
+    {
+      "frame": 7,
+      "bbox_original": [
+        31,
+        475,
+        276,
+        398
+      ],
+      "pixel_offset": [
+        59,
+        32
+      ],
+      "visible_bbox": [
+        59,
+        32,
+        335,
+        430
+      ],
+      "bottom_margin": 30,
+      "pixels_with_alpha": 54515
+    },
+    {
+      "frame": 8,
+      "bbox_original": [
+        323,
+        478,
+        276,
+        393
+      ],
+      "pixel_offset": [
+        56,
+        34
+      ],
+      "visible_bbox": [
+        56,
+        34,
+        332,
+        427
+      ],
+      "bottom_margin": 33,
+      "pixels_with_alpha": 54249
+    },
+    {
+      "frame": 9,
+      "bbox_original": [
+        622,
+        473,
+        265,
+        398
+      ],
+      "pixel_offset": [
+        59,
+        30
+      ],
+      "visible_bbox": [
+        59,
+        30,
+        324,
+        428
+      ],
+      "bottom_margin": 32,
+      "pixels_with_alpha": 56065
+    },
+    {
+      "frame": 10,
+      "bbox_original": [
+        916,
+        475,
+        261,
+        380
+      ],
+      "pixel_offset": [
+        57,
+        32
+      ],
+      "visible_bbox": [
+        57,
+        32,
+        318,
+        412
+      ],
+      "bottom_margin": 48,
+      "pixels_with_alpha": 52520
+    },
+    {
+      "frame": 11,
+      "bbox_original": [
+        1207,
+        477,
+        264,
+        393
+      ],
+      "pixel_offset": [
+        52,
+        34
+      ],
+      "visible_bbox": [
+        52,
+        34,
+        316,
+        427
+      ],
+      "bottom_margin": 33,
+      "pixels_with_alpha": 56570
+    },
+    {
+      "frame": 12,
+      "bbox_original": [
+        1501,
+        474,
+        268,
+        398
+      ],
+      "pixel_offset": [
+        51,
+        30
+      ],
+      "visible_bbox": [
+        51,
+        30,
+        319,
+        428
+      ],
+      "bottom_margin": 32,
+      "pixels_with_alpha": 54462
+    }
+  ],
+  "cell_resolution": [
+    352,
+    460
+  ],
+  "start_frames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "loop_frames": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}

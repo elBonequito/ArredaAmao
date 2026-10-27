@@ -96,6 +96,7 @@ if(connect&&((b.x-a.x)*a.dir)>0){a.attack.hit=true;let damage=a.attack.type==='p
      f.juninJumpStage=null;f.juninJumpStart=0;f.juninTakeoff=0;f.juninLandTime=0;
      f.juninCrouchStage=null;f.juninCrouchSince=0;f.juninCrouchFrame=0;f.juninCrouchStartFrame=0;
      f.command=EMPTY_COMMAND();
+     f.julioFloatMoving=false;f.julioFloatStartedAt=0;
      if(f.brain){f.brain.nextDecision=0;f.brain.command=EMPTY_COMMAND();f.brain.seenAttack=null;f.brain.observedAt=0;f.brain.guardUntil=0;f.brain.crouchUntil=0;}
      f.sprite.setVisible(true).setAlpha(1).setDepth(6).clearTint();
      if(f.sprite.anims&&f.sprite.anims.isPlaying)f.sprite.anims.stop();

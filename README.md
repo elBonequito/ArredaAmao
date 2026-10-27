@@ -1,4 +1,4 @@
-# ARREDA A MÃO — Projeto modular (v5.4)
+# ARREDA A MÃO — Projeto modular (v5.5)
 
 Reorganização **sem recompressão de sprites e sem mudanças intencionais na jogabilidade**. O código foi distribuído por responsabilidade, mantendo **uma única cena Phaser (`FightScene`)** e seus métodos de combate. As funções foram movidas mantendo o mesmo corpo original; a ligação por `Object.assign` é uma etapa intermediária deliberada para evitar reescrever toda a cena.
 
@@ -328,3 +328,39 @@ barras pretas. Se tiver Node.js instalado, rode os dois comandos de teste acima.
 No GitHub Pages, envie **todas as pastas** para a raiz do repositório. Não
 publique apenas o HTML: as imagens seguem como PNGs externos e os caminhos são
 relativos. Os arquivos de arte originais foram preservados.
+
+
+## v5.5 — Caminhada por levitação do Júlio Mente Pensante
+
+A spritesheet original (`1774 × 887`, RGBA) tinha **12 silhuetas separadas, em duas
+linhas de seis**, já com transparência verdadeira. Cada silhueta foi isolada usando
+exclusivamente o canal Alpha, sem chroma key, alterações de cor ou redesenho.
+Os 12 arquivos `julio_walk_0.png` a `julio_walk_11.png` estão em
+`assets/characters/julio/`, com **352 × 460 px**, todos com a mesma escala e
+ponto de referência horizontal. As células preservam a **variação de altura
+original dos pés** para mostrar a flutuação; não foi feito alinhamento de pés
+por frame nem alterada a física.
+
+- **Início do movimento:** `julio-float-start` (quadros 1–6, uma vez, 10 FPS).
+- **Movimentação contínua:** `julio-walk` (quadros 7–12, loop, 10 FPS).
+- **Ao parar, defender, pular, agachar, atacar ou sofrer hit stun:** retorna
+  à animação provisória `julio-idle`, como antes. Nenhum golpe foi criado.
+- **P1, P2 e CPU:** todos usam o mesmo estado de caminhada e espelhamento
+  horizontal já existente.
+- **Escala do Júlio:** 0,50 nos dois conjuntos; sem mudança de escala, origem,
+  hitbox, dano, velocidade, gravidade ou colisão.
+
+Arquivos alterados: `js/characters/julio.js`, `js/assets/manifest.js`,
+`js/scenes/FightScene.js`, `js/scenes/visual.js`, `js/combat/attacks.js`,
+`README.md`. Acrescentados: 12 PNGs em `assets/characters/julio/` e
+`PREVIA_JULIO_LEVITACAO.png`.
+
+**Teste manual recomendado:** abra por HTTP, escolha Júlio como P1 e segure
+A/D; solte e confira volta ao Fight Stance. Repita como P2 com ←/→ e como
+CPU, verificando Júlio x Júlio. Compare os pés durante a levitação e confirme
+que socos, chutes, agachar, defesa, pulo, rounds e os especiais de Chila e
+Junin continuam com o comportamento original.
+
+A sintaxe e os caminhos dos assets podem ser checados automaticamente, mas
+**a partida com Phaser real e a fluidez da transição precisam de avaliação
+visual no navegador**.
